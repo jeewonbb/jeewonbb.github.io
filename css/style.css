@@ -146,10 +146,12 @@ section.about_me .about_skill{
     border-right: 1px solid #69606b;
     padding: 5rem;
     font-size: 5rem;
+    width: 35%;
 }
 
 section.about_me .about_list{
     padding: 5rem 8rem;
+    width: 65%;
 }
 
 section.about_me .about_list li{
@@ -421,6 +423,7 @@ body::-webkit-scrollbar-track {
 
     section.about_me .about_list{
         padding: 3rem 6rem;
+        width: 100%;
     }
     section.work .work_list li:first-child .img_in,
     section.work .work_list li:nth-child(2) .img_in{
