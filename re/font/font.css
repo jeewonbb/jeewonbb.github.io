@@ -1,0 +1,23 @@
+@charset "UTF-8";
+	
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('../font/BebasNeue-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Work Sans';
+  letter-spacing: -5px;
+  src: url('../font/WorkSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Fredoka One';
+  src: url('FredokaOne-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'NanumGothic-Regular';
+    src: url('../font/NanumGothic-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'GowunDodum-Regular';
+    src: url('../font/GowunDodum-Regular.ttf') format('truetype');
+}
