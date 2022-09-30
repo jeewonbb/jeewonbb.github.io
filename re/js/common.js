@@ -1,7 +1,7 @@
 var animation1 = bodymovin.loadAnimation({
   container: $('#Arw1')[0], // Required
   //path: 'https://assets2.lottiefiles.com/packages/lf20_muyl0kpg.json', // URL 직접 입력
-  path: '../js/arw1.json', // 실제 사용 폴더 지정 ex) data.json
+  path: 'js/arw1.json', // 실제 사용 폴더 지정 ex) data.json
   renderer: 'svg', // Required
   loop: true, // Optional
   autoplay: true // Optional
@@ -10,7 +10,7 @@ var animation1 = bodymovin.loadAnimation({
 var animation1 = bodymovin.loadAnimation({
   container: $('#Arw2')[0], // Required
   //path: 'https://assets2.lottiefiles.com/packages/lf20_muyl0kpg.json', // URL 직접 입력
-  path: '../js/arw2.json', // 실제 사용 폴더 지정 ex) data.json
+  path: 'js/arw2.json', // 실제 사용 폴더 지정 ex) data.json
   renderer: 'svg', // Required
   loop: true, // Optional
   autoplay: true // Optional
