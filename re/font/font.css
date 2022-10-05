@@ -18,6 +18,7 @@
     src: url('../font/NanumGothic-Regular.ttf') format('truetype');
 }
 @font-face {
-    font-family: 'GowunDodum-Regular';
+    font-family: 'GowunDodum';
     src: url('../font/GowunDodum-Regular.ttf') format('truetype');
+    unicode-range: U+AC00-D7A3;
 }
