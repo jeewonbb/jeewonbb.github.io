@@ -516,6 +516,7 @@ body {
 }
 .about_inner .about_right .about_skill .about_list li {
   padding: 0 0 3rem 3rem;
+  font-size: 1.5vw;
 }
 .about_inner .about_right .about_skill .about_list li strong::before {
   content: "";
@@ -854,6 +855,13 @@ body {
   }
 }
 @media screen and (max-width: 767px) {
+  html, body {
+    height: auto;
+    overflow-y: scroll;
+  }
+  .inner {
+    height: auto;
+  }
   .header_inner .header_btm .txt_wrap {
     flex-wrap: wrap;
   }
@@ -934,11 +942,47 @@ body {
   .footer_inner .footer_box br {
     display: none;
   }
+  .scroll_wrap .page {
+    height: auto;
+    transform: unset;
+  }
+  .scroll_wrap.active-page1 {
+    transform: unset;
+  }
+  .scroll_wrap.active-page2 {
+    transform: unset;
+  }
+  .scroll_wrap.active-page3 {
+    transform: unset;
+  }
+  .scroll_wrap.active-page4 {
+    transform: unset;
+  }
+  .scroll_wrap.active-page1 .page.page1 {
+    transform: unset;
+  }
+  .scroll_wrap.active-page2 .page.page2 {
+    transform: unset;
+  }
+  .scroll_wrap.active-page3 {
+    transform: unset;
+  }
+  .scroll_wrap.active-page3 .page.page3 {
+    transform: unset;
+  }
+  .scroll_wrap.active-page4 {
+    transform: unset;
+  }
+  .scroll_wrap.active-page4 .page.page4 {
+    transform: unset;
+  }
+  .scroll_wrap.active-page5 {
+    transform: unset;
+  }
 }
 @media screen and (max-width: 480px) {
   .inner {
     padding: 3rem;
-    height: 100%;
   }
   .about_inner .about_right {
     padding: 3rem;
@@ -953,9 +997,5 @@ body {
   }
   .about_inner.inner {
     padding: 0;
-  }
-  .scroll_wrap .home_footer.page {
-    height: auto;
-    color: #2a27e2;
   }
 }/*# sourceMappingURL=style.css.map */
