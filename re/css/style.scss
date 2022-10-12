@@ -315,9 +315,10 @@ body{
         }
         
         .btn_mailto{
-
-            .btn_bubble{
             position: relative;
+            
+            .btn_bubble{
+            
                 b{
                     @include bubble_b();
                 }

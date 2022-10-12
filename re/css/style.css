@@ -337,7 +337,7 @@ body {
   font-weight: bold;
   line-height: 100%;
 }
-.header_inner .header_top .btn_mailto .btn_bubble {
+.header_inner .header_top .btn_mailto {
   position: relative;
 }
 .header_inner .header_top .btn_mailto .btn_bubble b {
