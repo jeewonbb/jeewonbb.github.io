@@ -36,6 +36,7 @@ html body {
   font-size: 0.625em;
   color: #ffffff;
   width: 100%;
+  height: 100%;
 }
 html body.main_home {
   width: 100%;
@@ -335,8 +336,7 @@ html body.main_home .wrap .footer .f_logo .arw_logo {
   top: 5px;
 }
 .wrap.sub .main .section:not(.logo) {
-  display: flex;
-  flex-wrap: wrap;
+  /*@include baseflex();*/
   margin-top: 5%;
   font-size: 2.2rem;
 }
@@ -589,4 +589,4 @@ html body.main_home .wrap .footer .f_logo .arw_logo {
   .wrap.sub .sub_footer .f_menu li:not(:nth-child(2), :nth-child(4)) {
     border-right: 1px solid rgba(255, 255, 255, 0.5);
   }
-}/*# sourceMappingURL=back_main.css.map */
+}/*# sourceMappingURL=main.css.map */

@@ -475,7 +475,7 @@ body{
                 line-height: 80%;
                 white-space: nowrap;
                 position: relative;
-                margin-bottom: 5rem;
+                margin-bottom: 2vw;
                 padding-bottom: 5rem;
 
                 &::after{
@@ -491,7 +491,6 @@ body{
             .about_list{
                 li{
                     padding: 0 0 3rem 3rem;
-                    font-size: 1.5vw;
 
                 strong{
                     &::before{
@@ -786,7 +785,7 @@ body{
             }
         }
         
-        &.box06{
+        &.box07{
             grid-row-start: 1;
             -ms-grid-row-span: 2;
             grid-row-end: 2;
@@ -814,7 +813,7 @@ body{
             }
         }
 
-        &.box07{
+        &.box06{
             grid-row-start: 2;
             -ms-grid-row-span: 2;
             grid-row-end: 3;
@@ -875,6 +874,9 @@ body{
             }
         }
     }
+    .about_inner .about_right .about_skill .about_list li{
+        font-size: 1.8vw;
+    }
 }
 
 @media screen and (max-width: 767px){
@@ -893,6 +895,10 @@ body{
                 flex-wrap: wrap;
                 .left_t{
                     width: 100%;
+
+                    .title_t{
+                        margin: 16rem 0px 5rem;
+                    }
                 }
                 .right_t{
                     width: 100%;
@@ -902,6 +908,7 @@ body{
 
             .logo_badge{
                 right: 0;
+                top: 19%;
             }
         }
 
@@ -927,22 +934,33 @@ body{
         .about_right{
             width: 100%;
             border: 0;
+
+            .about_skill .about_list li{
+                font-size: 1.8rem;
+            }
         }
     }
 
     .work_inner{
         .work_list{
             .list_wrap{
+                position: relative;
+
                 .txt_list{
                     width: 100%;
+                    position: relative;
+                    z-index: 2;
                 }
 
                 .img_list{
                     width: 100%;
                     height: 100%;
+                    position: absolute;
 
                     li{
-                        left: 33%;
+                        top: 0;
+                        left: auto;
+                        right: 0;
                     }
                 }
             }
@@ -956,6 +974,7 @@ body{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         display: block;
+        padding-bottom: 3rem;
 
         .footer_box{
             &.box01,&.box02,&.box03,&.box04,&.box05,&.box06,&.box07{
@@ -986,14 +1005,14 @@ body{
                 }
             }
 
-            &.box06{
+            &.box07{
                 #Arw2{
                     position: absolute;
                     right: 0;
                 }
             }
 
-            &.box07{
+            &.box06{
                 #Fly{
                     top: 0;
                     right: 0;

@@ -147,11 +147,12 @@ $(function(){
           }
         });
       } else if (width < 767){
-        $("scroll_wrap").removeClass("active-page1");
-        $("home_header").removeClass("page1, page");
-        $("section").removeClass("page2, page3, page");
-        $("home_footer").removeClass("page4, page");
-        //$("home_header").removeClass("page1, page");
+        $(".btn_top").click(function(){
+          $('html, body').stop().animate( { scrollTop : 0 } );
+        })
+        $('.btn_bubble').click(function(){
+          $('html, body').stop().animate({scrollTop: $(".home_footer").offset().top - 10}, 500);
+        });
       }
   });
   $(window).trigger("resize"); 
