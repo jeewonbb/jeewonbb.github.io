@@ -884,6 +884,7 @@ body{
     html, body{
         height: auto;
         overflow-y: scroll;
+        overflow-x: hidden;
     }
     .inner{
         height: auto;
@@ -914,8 +915,8 @@ body{
 
         .header_top{
             .btn_mailto{
-                .btn_bubble{
                 position: relative;
+                .btn_bubble{
                     b{
                         padding: 4rem;
                     }
