@@ -962,9 +962,6 @@ body {
   .footer_inner .footer_box br {
     display: none;
   }
-  .scroll_wrap {
-    overflow-x: hidden;
-  }
   .scroll_wrap .page {
     height: auto;
     transform: unset;
