@@ -148,10 +148,10 @@ $(function(){
         });
       } else if (width < 767){
         $(".btn_top").click(function(){
-          $('html, body').stop().animate( { scrollTop : 0 } );
+          $('html, body').stop().animate( { scrollTop : 0 }, 800);
         })
         $('.btn_bubble').click(function(){
-          $('html, body').stop().animate({scrollTop: $(".home_footer").offset().top - 10}, 500);
+          $('html, body').stop().animate({scrollTop: $(".home_footer").offset().top - 10}, 800);
         });
       }
   });

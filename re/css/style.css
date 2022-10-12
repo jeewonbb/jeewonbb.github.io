@@ -339,6 +339,8 @@ body {
 }
 .header_inner .header_top .btn_mailto {
   position: relative;
+  height: 66px;
+  width: 66px;
 }
 .header_inner .header_top .btn_mailto .btn_bubble b {
   display: block;
@@ -883,14 +885,12 @@ body {
     right: 0;
     top: 7%;
   }
+  .header_inner .header_top .h1 {
+    font-size: 3.5rem;
+  }
   .header_inner .header_top .btn_mailto {
-    position: relative;
-  }
-  .header_inner .header_top .btn_mailto .btn_bubble b {
-    padding: 4rem;
-  }
-  .header_inner .header_top .btn_mailto .btn_bubble span {
-    font-size: 2rem;
+    height: 54px;
+    width: 54px;
   }
   .about_inner .about_left {
     display: none;

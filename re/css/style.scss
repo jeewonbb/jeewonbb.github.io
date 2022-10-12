@@ -316,7 +316,9 @@ body{
         
         .btn_mailto{
             position: relative;
-            
+            height: 66px;
+            width: 66px;
+
             .btn_bubble{
             
                 b{
@@ -916,16 +918,13 @@ body{
         }
 
         .header_top{
+            .h1{
+                font-size: 3.5rem;
+            }
+
             .btn_mailto{
-                position: relative;
-                .btn_bubble{
-                    b{
-                        padding: 4rem;
-                    }
-                    span{
-                        font-size: 2rem;
-                    }  
-                }
+                height: 54px;
+                width: 54px;
             }
         }   
     }
