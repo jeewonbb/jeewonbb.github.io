@@ -967,36 +967,47 @@ body {
   }
   .scroll_wrap.active-page1 {
     transform: unset;
+    overflow-x: hidden;
   }
   .scroll_wrap.active-page2 {
     transform: unset;
+    overflow-x: hidden;
   }
   .scroll_wrap.active-page3 {
     transform: unset;
+    overflow-x: hidden;
   }
   .scroll_wrap.active-page4 {
     transform: unset;
+    overflow-x: hidden;
   }
   .scroll_wrap.active-page1 .page.page1 {
     transform: unset;
+    overflow-x: hidden;
   }
   .scroll_wrap.active-page2 .page.page2 {
     transform: unset;
+    overflow-x: hidden;
   }
   .scroll_wrap.active-page3 {
     transform: unset;
+    overflow-x: hidden;
   }
   .scroll_wrap.active-page3 .page.page3 {
     transform: unset;
+    overflow-x: hidden;
   }
   .scroll_wrap.active-page4 {
     transform: unset;
+    overflow-x: hidden;
   }
   .scroll_wrap.active-page4 .page.page4 {
     transform: unset;
+    overflow-x: hidden;
   }
   .scroll_wrap.active-page5 {
     transform: unset;
+    overflow-x: hidden;
   }
 }
 @media screen and (max-width: 480px) {
