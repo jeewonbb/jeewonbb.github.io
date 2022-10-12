@@ -873,6 +873,7 @@ body {
   }
   .header_inner .header_btm .txt_wrap .left_t .title_t {
     margin: 16rem 0px 5rem;
+    font-size: 6rem;
   }
   .header_inner .header_btm .txt_wrap .right_t {
     width: 100%;
@@ -880,7 +881,7 @@ body {
   }
   .header_inner .header_btm .logo_badge {
     right: 0;
-    top: 19%;
+    top: 7%;
   }
   .header_inner .header_top .btn_mailto {
     position: relative;
@@ -961,53 +962,46 @@ body {
   .footer_inner .footer_box br {
     display: none;
   }
+  .scroll_wrap {
+    overflow-x: hidden;
+  }
   .scroll_wrap .page {
     height: auto;
     transform: unset;
+    overflow-x: hidden;
   }
   .scroll_wrap.active-page1 {
     transform: unset;
-    overflow-x: hidden;
   }
   .scroll_wrap.active-page2 {
     transform: unset;
-    overflow-x: hidden;
   }
   .scroll_wrap.active-page3 {
     transform: unset;
-    overflow-x: hidden;
   }
   .scroll_wrap.active-page4 {
     transform: unset;
-    overflow-x: hidden;
   }
   .scroll_wrap.active-page1 .page.page1 {
     transform: unset;
-    overflow-x: hidden;
   }
   .scroll_wrap.active-page2 .page.page2 {
     transform: unset;
-    overflow-x: hidden;
   }
   .scroll_wrap.active-page3 {
     transform: unset;
-    overflow-x: hidden;
   }
   .scroll_wrap.active-page3 .page.page3 {
     transform: unset;
-    overflow-x: hidden;
   }
   .scroll_wrap.active-page4 {
     transform: unset;
-    overflow-x: hidden;
   }
   .scroll_wrap.active-page4 .page.page4 {
     transform: unset;
-    overflow-x: hidden;
   }
   .scroll_wrap.active-page5 {
     transform: unset;
-    overflow-x: hidden;
   }
 }
 @media screen and (max-width: 480px) {
