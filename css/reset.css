@@ -11,7 +11,7 @@ dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
 ul, ol, li {list-style: none; }
 a {text-decoration: none; color: inherit}
 a:hover a:focus {text-decoration: none; outline: 0;}
-img {border: 0 none; width: 100%;}
+img {border: 0 none; max-width: 100%;}
 table {border-collapse: separate; border-spacing: 0;}
 strong{font-weight:bold}
 caption, th, td {font-weight: normal;text-align: left;}
@@ -24,7 +24,6 @@ blockquote, q {quotes: "" "";}
 .align-c{text-align: center;}
 .align-l{text-align: left;}
 .align-r{text-align: right;}
-.dp-f{display: flex; flex-wrap: wrap;}
 .dp-b{display: block;}
 .dp-ib{display: inline-block;}
 .mt10{margin-top: 1rem;}
