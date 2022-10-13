@@ -8,7 +8,7 @@
 				<div class="arw_logo"><img src="./img/arw.png" alt="방향이미지"></div>
 			</div>
 
-			<div class="nav_title">
+			<div class="nav_title right">
 				<a href="sub02.php" target="_self">80 <span></span></a>
 				<p class="nav_txt">SCOPRI</p>
 			</div>

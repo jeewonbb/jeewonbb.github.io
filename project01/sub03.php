@@ -1,19 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
- <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> Nike - cortez </title>
-  <link rel="stylesheet" href="./css/main.css" />
-  <script src="js/jquery.min.js"></script>
-  <script src="js/includehtml.js" defer></script>
-  <script src="js/main.js"></script>
- </head>
-
- <body>
-  <div class="wrap sub sub03">
-	<header data-include="./include/header.html"></header>
-	<main class="main">
+<? include_once('include/header.php'); ?>
+	<main class="main sub sub03">
 		<section class="section logo">
 			<h2><strong>90</strong><span>TO THE SCREEN</span></h2>
 			<div class="logo_img">
@@ -21,7 +7,18 @@
 				<div class="nike_logo"><img src="./img/nike-logo.png" alt="나이키로고이미지"></div>
 				<div class="arw_logo"><img src="./img/arw.png" alt="방향이미지"></div>
 			</div>
-			
+
+			<div class="nav_wrap">
+                <div class="nav_title left">
+                    <a href="sub02.php" target="_self">80 <span></span></a>
+                    <p class="nav_txt">SCOPRI</p>
+                </div>
+
+                <div class="nav_title right">
+                    <a href="sub04.php" target="_self">00 <span></span></a>
+                    <p class="nav_txt">SCOPRI</p>
+                </div>
+			</div>	
 		</section>
 
 		<section class="section01 section">
@@ -31,26 +28,25 @@
 			<div class="imgslide from_right"><img src="./img/90s_01.jpg" alt="코르테즈제품이미지" /></div>
 		</section>
 
-		<section class="section02 section">		
+        <section class="section02 section">
 			<div class="imgslide from_left">
-				<div class="vdoslide">
+                <div class="vdoslide">
 					<span class="click_btn"><a href="javascript:;" target="_self">CLICK</a></span>
 					<video muted preload loop id="myvideo01">
 						<source src="./img/90s_02.mp4">
 					</video>
 				</div>
-			</div>
-			<div class="section_txt">				
+            </div>
+			<div class="section_txt">
 				<p>Conosciute come le scarpe di “Forrest Gump”, nel film, il protagonista le considera le sue sneakers magiche.</p>
 			</div>
-			
 		</section>
 
-		<section class="section03 section">
-			<div class="imgslide from_left w100"><img src="./img/90s_03.jpg" alt="코르테즈제품이미지" /></div>
+        <section class="section03 section">
+			<div class="imgslide w100"><img src="./img/90s_03.jpg" alt="코르테즈제품이미지" /></div>
 		</section>
 
-		<section class="section04 section">
+		<section class="section04 section">		
 			<div class="imgslide from_left">
 				<div class="vdoslide">
 					<span class="click_btn"><a href="javascript:;" target="_self">CLICK</a></span>
@@ -59,21 +55,23 @@
 					</video>
 				</div>
 			</div>
-			<div class="section_txt">
-				<strong>STYLE TIP #1</strong>
-				<p>Come una star:jeans strappati e labbra colorate.</p>
+			<div class="section_txt">				
+				<strong>STYLE TIP #1</strong> 
+				<p>Come una star : jeans strappati e labbra colorate.</p>
 			</div>
+			
 		</section>
 
 		<section class="section05 section">
-			<div class="section_txt">
+            <div class="section_txt">
 				<strong>STYLE TIP #2</strong>
-				<p>Corri forte, corri! Vento tra i capelli e sorriso sulle labbra.</p>
+				<p>Corri forte, corri! <br>Vento tra i capelli e sorriso sulle labbra.</p>
 			</div>
-			<div class="imgslide from_right"><img src="./img/80s_05.jpg" alt="코르테즈제품이미지" /></div>
+			<div class="imgslide from_right"><img src="./img/90s_05.jpg" alt="코르테즈제품이미지" /></div>
+			
 		</section>
-		
-		<section class="section06 section last"> 
+
+        <section class="section06 section last"> 
 			<div class="condividi align-c">
 				<p class="line">Condividi il tuo look anni 90 usando l’hashtag #Cortez</p>
 				
@@ -86,8 +84,4 @@
 		</section>
 
 	</main><!--main-->
-	<footer data-include="sub_footer.html"></footer>
-	
-  </div><!--wrap-->
- </body>
-</html>
+<? include_once('include/sub_footer.php'); ?>

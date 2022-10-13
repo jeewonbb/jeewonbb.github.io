@@ -1,7 +1,7 @@
 <? include_once('include/header.php'); ?>
 	<main class="main sub sub02">
 		<section class="section logo">
-			<h2><strong>80</strong><span>FROM THE TRACK</span></h2>
+			<h2><strong>80</strong><span>TO THE STREETS</span></h2>
 			<div class="logo_img">
 				<div class="cortez_logo"><img src="./img/cortez-logo.png" alt="코르테즈로고이미지"></div>
 				<div class="nike_logo"><img src="./img/nike-logo.png" alt="나이키로고이미지"></div>
