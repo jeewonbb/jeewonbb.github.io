@@ -1,24 +1,24 @@
 @charset "UTF-8";
 	
 @font-face {
-  font-family: 'AlegreyaSansSC-Regular';
-  src: url('../font/AlegreyaSansSC-Regular.ttf') format('truetype');
+  font-family: 'Bebas Neue';
+  src: url('../font/BebasNeue-Regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: 'BaiJamjuree-Light';
-  src: url('../font/BaiJamjuree-Light.ttf') format('truetype');
+  font-family: 'Work Sans';
+  letter-spacing: -5px;
+  src: url('../font/WorkSans-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Fredoka One';
+  src: url('FredokaOne-Regular.ttf') format('truetype');
 }
 @font-face {
     font-family: 'NanumGothic-Regular';
     src: url('../font/NanumGothic-Regular.ttf') format('truetype');
-    unicode-range: U+AC00-D7A3;
 }
 @font-face {
-    font-family: 'GowunDodum-Regular';
+    font-family: 'GowunDodum';
     src: url('../font/GowunDodum-Regular.ttf') format('truetype');
     unicode-range: U+AC00-D7A3;
-}
-@font-face {
-    font-family: 'YanoneKaffeesatz-VariableFont_wght';
-    src: url('../font/YanoneKaffeesatz-VariableFont_wght.ttf') format('truetype');
 }
