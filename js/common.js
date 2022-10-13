@@ -1,134 +1,285 @@
-/*
-const body = document.body;
-const main = document.querySelector('.scroll_wrap');
-
-let sx = 0;
-let sy = 0;
-
-let dx = sx;
-let dy = sy;
-
-body.style.height = main.height + 'px';
-
-main.style.position = 'fixed';
-main.style.top = 0;
-main.style.left = 0;
-
-window.addEventListener('scroll', scroll);
-
-function scroll() {
-  sx = window.pageXOffset;
-  sy = window.pageYOffset;
-}
-
-window.requestAnimationFrame(render);
-
-function render() {
-
-  //dx = lerp(dx, sx, 0.07);
-  dy = lerp(dy, sy, 0.07);
-  
-  //dx = Math.floor(dx * 100) / 100;
-  dy = Math.floor(dy * 100) / 100;
-
-  //body.style.transform = `translate(-${dx}px, -${dy}px)`;
-  body.style.transform = `translate3d(0px, -${dy}px, 0px)`; 
-  
-  window.requestAnimationFrame(render);
-}
-
-function lerp(a, b, n) {
-  return (1 - n) * a + n * b;
-}
-
-window.addEventListener("scroll", function () {
-  const SCROLLED_HEIGHT = window.scrollY;
-  const WINDOW_HEIGHT = window.innerHeight;
-  const DOC_TOTAL_HEIGHT = document.body.offsetHeight;
-  const IS_BOTTOM = WINDOW_HEIGHT + SCROLLED_HEIGHT === DOC_TOTAL_HEIGHT;
- 
-  if (IS_BOTTOM) {
-    console.log('is bottom');
-  }
+var animation1 = bodymovin.loadAnimation({
+  container: $('#Arw1')[0], // Required
+  //path: 'https://assets2.lottiefiles.com/packages/lf20_muyl0kpg.json', // URL 직접 입력
+  path: 'js/arw1.json', // 실제 사용 폴더 지정 ex) data.json
+  renderer: 'svg', // Required
+  loop: true, // Optional
+  autoplay: true // Optional
 });
 
-/*
-const $text = document.querySelector(".typing_txt");
+var animation1 = bodymovin.loadAnimation({
+  container: $('#Arw2')[0], // Required
+  //path: 'https://assets2.lottiefiles.com/packages/lf20_muyl0kpg.json', // URL 직접 입력
+  path: 'js/arw2.json', // 실제 사용 폴더 지정 ex) data.json
+  renderer: 'svg', // Required
+  loop: true, // Optional
+  autoplay: true // Optional
+});
 
-// 글자 모음
-const letters = ["Web Publisher Baek jeewon"];
+var animation1 = bodymovin.loadAnimation({
+  container: $('#Fly')[0], // Required
+  //path: 'https://assets2.lottiefiles.com/packages/lf20_muyl0kpg.json', // URL 직접 입력
+  path: 'js/fly.json', // 실제 사용 폴더 지정 ex) data.json
+  renderer: 'svg', // Required
+  loop: true, // Optional
+  autoplay: true // Optional
+});
 
-// 글자 입력 속도
-const speed = 100;
-let i = 0;
+$(".txt_list li").mouseover(function () {
+  var tab_sel = $(this).attr("data-tab");
+  $("#" + tab_sel).css({"transform":"translateY(0%)","z-index":"1"});
+});
 
-// 타이핑 효과
-const typing = async () => {  
-  const letter = letters[i].split("");
-  
-  while (letter.length) {
-    await wait(speed);
-    $text.innerHTML += letter.shift(); 
-  }
-  
-  // 잠시 대기
-  await wait(800);
-  
-  // 지우는 효과
-  if (letters[i + 1]) remove();
-}
+$(".txt_list li").mouseleave(function () {
+var tab_sel = $(this).attr("data-tab");
+$("#" + tab_sel).css({"transform":"translateY(800%)"});
 
-// 글자 지우는 효과
-const remove = async () => {
-  const letter = letters[i].split("");
-  
-  while (letter.length) {
-    await wait(speed);
-    
-    letter.pop();
-    $text.innerHTML = letter.join(""); 
-  }
-  
-  // 다음 순서의 글자로 지정, 타이핑 함수 다시 실행
-  i++;
-  typing();
-}
+timer = setTimeout(function () {
+  $("#" + tab_sel).css({"z-index":"-1"});
+}, 10);
 
-// 딜레이 기능 ( 마이크로초 )
-function wait(ms) {
-  return new Promise(res => setTimeout(res, ms))
-}
+timer2 = setTimeout(function () {
+  $("#" + tab_sel).css({"transform":"translateY(-800%)"});
+}, 500);
+}); 
 
-// 초기 실행
-setTimeout(typing, 2700);
-
+$(".txt_wrap .left_t").css({"transform":"translateY(100%)"});
 
 $(function(){
-  var welcomeSection = $('.welcome-section'),
-  enterButton = welcomeSection.find('.enter-button');
+  $(window).resize(function () {
+      var width = $(window).width();
+      if (width>=768) {
+        
+        var $wrap = $(".scroll_wrap"),
+            pages = $(".page").length,
+            scrolling = false,
+            currentPage = 1,
+            $navPanel = $(".nav-panel"),
+            $scrollBtn = $(".scroll-btn"),
+            $navBtn = $(".nav-btn");
+            
+        /*****************************
+        ***** NAVIGATE FUNCTIONS *****
+        *****************************/
+        function manageClasses() {
+          $wrap.removeClass(function (index, css) {
+            return (css.match (/(^|\s)active-page\S+/g) || []).join(' ');
+          });
+          $wrap.addClass("active-page" + currentPage);
+          $navBtn.removeClass("active");
+          $(".nav-btn.nav-page" + currentPage).addClass("active");
+          $navPanel.addClass("invisible");
+          scrolling = true;
+          setTimeout(function() {
+            $navPanel.removeClass("invisible");
+            scrolling = false;
+          }, 1000);
+        }
+        function navigateUp() {
+          if (currentPage > 1) {
+            currentPage--;
+            if (Modernizr.csstransforms) {
+              manageClasses();
+            } else {
+              $wrap.animate({"top": "-" + ( (currentPage - 1) * 100) + "%"}, 1000);
+            }
+          }
+        }
+      
+        function navigateDown() {
+          if (currentPage < pages) {
+            currentPage++;
+            if (Modernizr.csstransforms) {
+              manageClasses();
+            } else {
+              $wrap.animate({"top": "-" + ( (currentPage - 1) * 100) + "%"}, 1000);
+            }
+          }
+        }
+      
+        /*********************
+        ***** MOUSEWHEEL *****
+        *********************/
+        $(document).on("mousewheel DOMMouseScroll", function(e) {
+          if (!scrolling) {
+            if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+              navigateUp();
+            } else { 
+              navigateDown();
+            }
+          }
+        });
+      
+        /**************************
+        ***** RIGHT NAVIGATION ****
+        **************************/
+      
+        /* NAV UP/DOWN BTN PAGE NAVIGATION */
+        $(document).on("click", ".scroll-btn", function() {
+          if ($(this).hasClass("up")) {
+            navigateUp();
+          } else {
+            navigateDown();
+          }
+        });
+      
+        /* NAV CIRCLE DIRECT PAGE BTN */
+        $(document).on("click", ".nav-btn:not(.active)", function() {
+          if (!scrolling) {
+            var target = $(this).attr("data-target");
+            if (Modernizr.csstransforms) {
+              $wrap.removeClass(function (index, css) {
+                return (css.match (/(^|\s)active-page\S+/g) || []).join(' ');
+              });
+              $wrap.addClass("active-page" + target);
+              $navBtn.removeClass("active");
+              $(this).addClass("active");
+              $navPanel.addClass("invisible");
+              currentPage = target;
+              scrolling = true;
+              setTimeout(function() {
+                $navPanel.removeClass("invisible");
+                scrolling = false; 
+              }, 1000);
+            } else {
+              $wrap.animate({"top": "-" + ( (target - 1) * 100) + "%"}, 1000);
+            }
+          }
+        });
+      } else if (width < 767){
+        $(".btn_top").click(function(){
+          $('html, body').stop().animate( { scrollTop : 0 }, 800);
+        })
+        $('.btn_bubble').click(function(){
+          $('html, body').stop().animate({scrollTop: $(".home_footer").offset().top - 10}, 800);
+        });
+      }
+  });
+  $(window).trigger("resize"); 
+});
 
-  setTimeout(function(){
-    welcomeSection.removeClass('content-hidden');
-  },800);
-  enterButton.on('click',function(e){
-    e.preventDefault();
-    welcomeSection.fadeOut();
-  })
-})
-*/
-$( document ).ready(function() {
-    $(".intro .typing_txt").fadeIn();
-    $(".intro").delay(3000).fadeOut().addClass('on');
-    $(".about").css('margin-top','0');
-    //if($('.intro').css('display') === 'flex') {
-    //    $(body).css('overflow-y','hidden');
-    //}
-    setTimeout(function() {
-        $('body').css('overflow-y','auto');
-    }, 3000);
 
-    $('.work_list li').hover(function() {
-        //$(this).toggleClass('on');
-        $(this).find('.img_in').fadeToggle();
+
+
+$(document).ready(function () {
+  
+
+  ///////////////////////////////////
+
+  /*
+  var $wrap = $(".scroll_wrap"),
+      pages = $(".page").length,
+      scrolling = false,
+      currentPage = 1,
+      $navPanel = $(".nav-panel"),
+      $scrollBtn = $(".scroll-btn"),
+      $navBtn = $(".nav-btn");
+      
+  //////////////////////////////
+  ***** NAVIGATE FUNCTIONS *****
+  //////////////////////////////
+  function manageClasses() {
+    $wrap.removeClass(function (index, css) {
+      return (css.match (/(^|\s)active-page\S+/g) || []).join(' ');
     });
-});	 
+    $wrap.addClass("active-page" + currentPage);
+    $navBtn.removeClass("active");
+    $(".nav-btn.nav-page" + currentPage).addClass("active");
+    $navPanel.addClass("invisible");
+    scrolling = true;
+    setTimeout(function() {
+      $navPanel.removeClass("invisible");
+      scrolling = false;
+    }, 1000);
+  }
+  function navigateUp() {
+    if (currentPage > 1) {
+      currentPage--;
+      if (Modernizr.csstransforms) {
+        manageClasses();
+      } else {
+        $wrap.animate({"top": "-" + ( (currentPage - 1) * 100) + "%"}, 1000);
+      }
+    }
+  }
+
+  function navigateDown() {
+    if (currentPage < pages) {
+      currentPage++;
+      if (Modernizr.csstransforms) {
+        manageClasses();
+      } else {
+        $wrap.animate({"top": "-" + ( (currentPage - 1) * 100) + "%"}, 1000);
+      }
+    }
+  }
+
+  //////////////////////
+  ***** MOUSEWHEEL *****
+  //////////////////////
+  $(document).on("mousewheel DOMMouseScroll", function(e) {
+    if (!scrolling) {
+      if (e.originalEvent.wheelDelta > 0 || e.originalEvent.detail < 0) {
+        navigateUp();
+      } else { 
+        navigateDown();
+      }
+    }
+  });
+
+  ///////////////////////////
+  ***** RIGHT NAVIGATION ****
+  ///////////////////////////
+
+  ///////////////////////////////////
+  * NAV UP/DOWN BTN PAGE NAVIGATION *
+  ///////////////////////////////////
+  $(document).on("click", ".scroll-btn", function() {
+    if ($(this).hasClass("up")) {
+      navigateUp();
+    } else {
+      navigateDown();
+    }
+  });
+
+  //////////////////////////////
+  * NAV CIRCLE DIRECT PAGE BTN *
+  //////////////////////////////
+  $(document).on("click", ".nav-btn:not(.active)", function() {
+    if (!scrolling) {
+      var target = $(this).attr("data-target");
+      if (Modernizr.csstransforms) {
+        $wrap.removeClass(function (index, css) {
+          return (css.match (/(^|\s)active-page\S+/g) || []).join(' ');
+        });
+        $wrap.addClass("active-page" + target);
+        $navBtn.removeClass("active");
+        $(this).addClass("active");
+        $navPanel.addClass("invisible");
+        currentPage = target;
+        scrolling = true;
+        setTimeout(function() {
+          $navPanel.removeClass("invisible");
+          scrolling = false; 
+        }, 1000);
+      } else {
+        $wrap.animate({"top": "-" + ( (target - 1) * 100) + "%"}, 1000);
+      }
+    }
+  });
+  
+  */
+ 
+    var random = Math.floor(Math.random() * $('.loading_page p').length);
+    $('.loading_page p').hide().eq(random).hide();
+
+    /*
+    $(window).resize(function(){ 
+      if (window.innerWidth < 480) {
+        $(".scroll_wrap > *").removeClass("page");
+      } else { 
+        $(".scroll_wrap > *").addClass("page");
+      }
+    }).resize();
+    */
+  });
