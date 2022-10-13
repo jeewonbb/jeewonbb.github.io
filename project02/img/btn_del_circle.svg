@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" id="prefix__btn_cancle" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <style>
+            .prefix__cls-2{fill:none;stroke:#222}
+        </style>
+    </defs>
+    <g id="prefix__타원_311" data-name="타원 311" style="stroke:#ccc;fill:none">
+        <circle cx="16" cy="16" r="16" style="stroke:none"/>
+        <circle cx="16" cy="16" r="15.5" style="fill:none"/>
+    </g>
+    <g id="prefix__그룹_872" data-name="그룹 872" transform="translate(11 11)">
+        <path id="prefix__선_122" d="M0 0L10 10" class="prefix__cls-2" data-name="선 122"/>
+        <path id="prefix__선_123" d="M10 0L0 10" class="prefix__cls-2" data-name="선 123"/>
+    </g>
+</svg>

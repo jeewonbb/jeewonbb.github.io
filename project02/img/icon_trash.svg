@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17">
+    <defs>
+        <style>
+            .prefix__cls-4{stroke:#666;fill:none;stroke-linecap:square}
+        </style>
+    </defs>
+    <g id="prefix__icon_trash" transform="translate(-261 -179.015)">
+        <g id="prefix__사각형_440" data-name="사각형 440" transform="translate(261 181)" style="stroke:#666;fill:#fff">
+            <path d="M0 0H16V1H0z" style="stroke:none"/>
+            <rect width="15" x=".5" y=".5" style="fill:none"/>
+        </g>
+        <path id="prefix__패스_3730" d="M18091.182 11509l1.1 13.515h10.309l1.182-13.515z" data-name="패스 3730" transform="translate(-17828.682 -11327)" style="fill:none;stroke:#666"/>
+        <path id="prefix__패스_3731" d="M18094.322 11507.02v-1.485h8.484v1.485" data-name="패스 3731" transform="translate(-17829.822 -11326.02)" style="stroke-linecap:round;stroke-linejoin:round;fill:none;stroke:#666"/>
+        <path id="prefix__패스_3732" d="M18096.242 11511.449v6.9" class="prefix__cls-4" data-name="패스 3732" transform="translate(-17827.518 -11326.255)"/>
+        <path id="prefix__패스_3733" d="M0 0l1.162 6.59" class="prefix__cls-4" data-name="패스 3733" transform="rotate(14.98 -567.693 1125.72)"/>
+        <path id="prefix__패스_3734" d="M1.162 0L0 6.592" class="prefix__cls-4" data-name="패스 3734" transform="rotate(-14.98 836.053 -909.788)"/>
+    </g>
+</svg>
