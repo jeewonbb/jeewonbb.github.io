@@ -125,6 +125,7 @@ html body {
 }
 html body.main_home {
   width: 100%;
+  height: 100%;
   overflow: hidden;
   border: 10px solid #fff;
 }
@@ -376,11 +377,32 @@ html body.main_home .wrap .footer .f_logo .arw_logo {
 .wrap.sub03 .sub_footer {
   background: #b09bed;
 }
+.wrap.sub03 .section01 .section_txt {
+  margin-top: 8%;
+}
+.wrap.sub03 .section02 .imgslide {
+  margin-top: -10%;
+}
+.wrap.sub03 .section05 .imgslide {
+  margin-top: -20%;
+}
 .wrap.sub04 {
   background: linear-gradient(-180deg, rgb(72, 116, 220) 6%, rgb(73, 116, 220) 13%, rgb(149, 228, 239) 40%);
 }
 .wrap.sub04 .sub_footer {
   background: #4978dc;
+}
+.wrap.sub04 .section01 .section_txt {
+  margin-top: 8%;
+}
+.wrap.sub04 .section02 .imgslide {
+  margin-top: -25%;
+}
+.wrap.sub04 .section03 .imgslide {
+  margin-top: -15%;
+}
+.wrap.sub04 .section04 .imgslide {
+  margin-top: -10%;
 }
 .wrap.sub .main {
   position: relative;
@@ -467,7 +489,10 @@ html body.main_home .wrap .footer .f_logo .arw_logo {
   display: flex;
   flex-wrap: wrap;
   font-size: 2.2rem;
-  margin: 5% 9% 0 9%;
+  margin: 5% auto 0 auto;
+  max-width: calc(1200px + 16%);
+  place-content: center;
+  padding: 0 8%;
 }
 .wrap.sub .main .section:not(.logo) img,
 .wrap.sub .main .section:not(.logo) video {
@@ -536,7 +561,7 @@ html body.main_home .wrap .footer .f_logo .arw_logo {
 .wrap.sub .main .section:not(.logo) .section_txt {
   width: 40%;
   padding: 0 1%;
-  font-size: 1.8vw;
+  font-size: 1.6vw;
 }
 .wrap.sub .main .section:not(.logo) .section_txt p:after {
   content: "";
@@ -550,12 +575,16 @@ html body.main_home .wrap .footer .f_logo .arw_logo {
 .wrap.sub .main .section:not(.logo).w50r {
   justify-content: right;
 }
+.wrap.sub .main .section:not(.logo).w50l {
+  justify-content: left;
+}
 .wrap.sub .main .section.last {
   display: block;
   margin: 15rem auto 20rem auto;
 }
 .wrap.sub .main .section.last > :first-child {
   margin: 0 auto;
+  font-size: 3rem;
 }
 .wrap.sub .main .section.last > :first-child .line::after,
 .wrap.sub .main .section.last > :first-child .line::before {

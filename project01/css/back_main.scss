@@ -98,6 +98,7 @@ html {
 
     &.main_home {
         width: 100%;
+        height: 100%;
         overflow: hidden;
         border: 10px solid #fff;
 
@@ -388,13 +389,54 @@ html {
         .sub_footer{
             background:#b09bed
         }
+
+        .section01 {
+            .section_txt{
+                margin-top: 8%;
+            }
+        }
+
+        .section02 {
+            .imgslide {
+                margin-top: -10%;
+            }
+        }
+        
+        .section05 {
+            .imgslide {
+                margin-top: -20%;
+            }
+        }    
     }
+
     &.sub04{background: linear-gradient(-180deg, rgb(72, 116, 220) 6%, rgb(73, 116, 220) 13%, rgb(149, 228, 239) 40%);
         .sub_footer{
             background:#4978dc
         }
 
-        
+        .section01 {
+            .section_txt{
+                margin-top: 8%;
+            }
+        }
+
+        .section02 {
+            .imgslide {
+                margin-top: -25%;
+            }
+        }
+
+        .section03 {
+            .imgslide{
+                margin-top: -15%;
+            }
+        }
+
+        .section04 {
+            .imgslide {
+                margin-top: -10%;
+            }
+        }        
     }
     &.sub{
             .main{
@@ -500,7 +542,10 @@ html {
 
                 @include baseflex();
                 font-size: 2.2rem;
-                margin: 5% 9% 0 9%;
+                margin: 5% auto 0 auto;
+                max-width: calc(1200px + 16%);
+                place-content: center;
+                padding: 0 8%;
 
                 >:first-child{
                     margin-right: 4%;
@@ -567,7 +612,7 @@ html {
                 .section_txt{
                     width: 40%;
                     padding: 0 1%;
-                    font-size: 1.8vw;
+                    font-size: 1.6vw;
 
                     p:after{
                         @include line_bg();
@@ -575,6 +620,9 @@ html {
                 }
                 &.w50r{
                     justify-content: right;
+                }
+                &.w50l{
+                    justify-content: left;
                 }
             }
             
@@ -584,6 +632,7 @@ html {
                 
                 >:first-child{
                     margin: 0 auto;
+                    font-size: 3rem;
 
                     .line::after,
                     .line::before{
