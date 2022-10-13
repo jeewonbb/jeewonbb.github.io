@@ -478,8 +478,8 @@ body{
                 line-height: 80%;
                 white-space: nowrap;
                 position: relative;
-                margin-bottom: 2vw;
-                padding-bottom: 5rem;
+                margin-bottom: 1vw;
+                padding-bottom: 1rem;
 
                 &::after{
                     content: '';
@@ -493,7 +493,7 @@ body{
 
             .about_list{
                 li{
-                    padding: 0 0 3rem 3rem;
+                    padding:0 0 2rem 3rem;
 
                 strong{
                     &::before{
