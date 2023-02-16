@@ -1,0 +1,70 @@
+@charset "utf-8";
+@import url(https://cdn.rawgit.com/theeluwin/NotoSansKR-Hestia/master/stylesheets/NotoSansKR-Hestia.css);
+/*  reset */
+* {padding: 0; margin: 0; text-decoration: none; box-sizing: border-box; }
+html, body, div, span, applet, object, iframe, table, caption, tbody, tfoot, thead, tr, th, td, 
+del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, 
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, 
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend {
+     vertical-align: baseline; font-family: inherit; font-weight: inherit; font-style: inherit; font-size: 100%; outline: 0; padding: 0; margin: 0; border: 0;}
+
+ul, ol, li {list-style: none; }
+a {text-decoration: none; color: inherit}
+a:hover a:focus {text-decoration: none; outline: 0;}
+img {max-width:100%; vertical-align: top; border: 0 none; }
+table {border-collapse: separate; border-spacing: 0;}
+strong{font-weight:bold}
+caption, th, td {font-weight: normal;text-align: left;}
+blockquote:before, blockquote:after, q:before, q:after {content: "";}
+blockquote, q {quotes: "" "";}
+.clearfix::before, .clearfix::after, .clearfix:before, .clearfix:after {content: ""; display: block; }
+.clearfix::after, .clearfix:after {clear: both; }
+.txt-indent {font-size: 0px;line-height: 0px; text-indent: -9999px; position:absolute; overflow:hidden; left:-999em; width:0; height:0; visibility: hidden;}
+
+/*reset mobile default style*/
+body,textarea:focus,input:focus,a:focus {-webkit-tap-highlight-color: rgba(255, 255, 255, 0);}
+html{-ms-text-size-adjust: none;-webkit-text-size-adjust: none;text-size-adjust: none; overflow:hidden;}
+::-moz-selection {color:#fff;}
+::selection { color:#fff;}
+::-moz-selection {color:#fff;}
+
+/* PLACEHOLDER */
+/*  common */
+body{font-family:"Noto Sans Korean", "돋움", "dotum", sans-serif; position: relative; font-weight: 300;}
+input,textarea,select,button{font-family:"Noto Sans Korean", "돋움", "dotum", sans-serif;}
+input-placeholder {font-family: "Noto Sans Korean", "돋움", "dotum", sans-serif; color: inherit;}
+::-webkit-input-placeholder {font-family: "Noto Sans Korean", "돋움", "dotum", sans-serif; color: inherit;}
+:-moz-placeholder {font-family: "Noto Sans Korean", "돋움", "dotum", sans-serif; color: inherit;}
+::-moz-placeholder {font-family: "Noto Sans Korean", "돋움", "dotum", sans-serif; color: inherit;}
+:-ms-input-placeholder {font-family: "Noto Sans Korean", "돋움", "dotum", sans-serif; color: inherit;}
+textarea-placeholder {font-family: "Noto Sans Korean", "돋움", "dotum", sans-serif; color: inherit;}
+::-webkit-textarea-placeholder {font-family: "Noto Sans Korean", "돋움", "dotum", sans-serif; color: inherit;}
+:-moz-placeholder {font-family: "Noto Sans Korean", "돋움", "dotum", sans-serif; color: inherit;}
+::-moz-placeholder {font-family: "Noto Sans Korean", "돋움", "dotum", sans-serif; color: inherit;}
+:-ms-textarea-placeholder {font-family: "Noto Sans Korean", "돋움", "dotum", sans-serif; color: inherit;}
+.sr_only {position: absolute; height: 1px; width:1px; overflow: hidden; clip: rect(1px 1px 1px 1px); clip: rect(1px, 1px, 1px, 1px); }
+
+.mt10{margin-top: 10px !important}
+.mt20{margin-top: 20px !important}
+.mt30{margin-top: 30px !important}
+.mt40{margin-top: 40px !important}
+.mt50{margin-top: 50px !important}
+.mt60{margin-top: 60px !important}
+.mt70{margin-top: 70px !important}
+.mt80{margin-top: 80px !important}
+.mt90{margin-top: 90px !important}
+
+.title_jung{font-family:"TheJung120", "돋움", "dotum", sans-serif; font-size: 60px; color: #eada22; line-height: 120%;}
+.title_nanum_txt{font-family:"Nanum Square", "돋움", "dotum", sans-serif;}
+.f-36{font-size: 36px; font-weight: 400}
+.f-32{font-size: 32px; font-weight: 400}
+.f-48{font-size: 48px; padding-bottom:35px}
+.f-52{font-size: 52px; font-weight: 400}
+.f-400{font-weight: 400}
+.f-600{font-weight: 600}
+.align-c{text-align: center}
+.flex_n{flex:none}
+.f-right{float: right}
+.color-y{color:#eada22}
+.color-f{color:#fff}
+.color-b{color:#000}

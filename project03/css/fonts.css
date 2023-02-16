@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+@font-face {
+	font-family: 'Nanum Square';
+	src: url('../fonts/nanumsquarer.eot');
+	src: url('../fonts/nanumsquarer.eot?#iefix') format('embedded-opentype'), url('../fonts/nanumsquarer.woff') format('woff'), url('../fonts/nanumsquarer.ttf') format('truetype'), url('../fonts/nanumsquarer.svg#nanumsquarerregular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+ }
+	
+@font-face {
+  font-family: 'TheJung120';
+  src: url('../fonts/TheJung120.svg#TheJung120') format('svg'),
+       url('../fonts/TheJung120.ttf') format('truetype'),
+       url('../fonts/TheJung120.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
