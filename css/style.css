@@ -7,19 +7,16 @@
 body::-webkit-scrollbar {
     width: 10px;
 }
-
 body::-webkit-scrollbar-thumb {
     background-color: gray;
     border-radius: 10px;
     background-clip: padding-box;
     border: 2px solid transparent;
 }
-
 body::-webkit-scrollbar-track {
     border-radius: 10px;
     box-shadow: inset 0px 0px 5px white;
 }
-
 */
 @-webkit-keyframes swing {
   0% {
@@ -505,8 +502,8 @@ body {
   line-height: 80%;
   white-space: nowrap;
   position: relative;
-  margin-bottom: 2vw;
-  padding-bottom: 5rem;
+  margin-bottom: 1vw;
+  padding-bottom: 1rem;
 }
 .about_inner .about_right .about_skill .title::after {
   content: "";
@@ -517,7 +514,7 @@ body {
   left: -5rem;
 }
 .about_inner .about_right .about_skill .about_list li {
-  padding: 0 0 3rem 3rem;
+  padding: 0 0 2rem 3rem;
 }
 .about_inner .about_right .about_skill .about_list li strong::before {
   content: "";
