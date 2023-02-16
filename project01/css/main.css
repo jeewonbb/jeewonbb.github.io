@@ -1,13 +1,5 @@
 @import "reset.css";
 @import url("https://fonts.googleapis.com/css?family=Exo+2:300,400,500,600|Itim|Roboto+Mono");
-@-webkit-keyframes txt_fly {
-  0% {
-    transform: translatex(-20%);
-  }
-  100% {
-    transform: translatex(0%);
-  }
-}
 @keyframes txt_fly {
   0% {
     transform: translatex(-20%);
@@ -325,7 +317,6 @@ html body.main_home .wrap .footer .f_logo .arw_logo {
 }
 .wrap.sub .main .logo .nav_title .nav_txt {
   display: none;
-  -webkit-animation: txt_fly .6s ease-in-out;
   animation: txt_fly .6s ease-in-out;
   font-size: 16px;
 }

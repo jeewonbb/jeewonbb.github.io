@@ -1,0 +1,198 @@
+@import "common.css";
+@import "fonts.css";
+
+@mixin baseflex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin tictoc {
+    position: relative;
+
+    &::after{
+        content: '';
+        background: url(../images/c_ttcroc.svg) no-repeat;
+        background-size: contain;
+        position: absolute;
+        right: 0;
+    }
+}
+
+html{
+    width: 1080px;
+    margin: 0 auto;
+    overflow: scroll;
+}
+
+body.hidden{overflow: hidden}
+
+.num_pin {
+    .inputwrapper{
+        width: 534px;
+        height: 80px;
+        background: rgba(255, 255, 255, 0.3);
+        font-family: 'Spoqa Han Sans Neo', 'sans-serif';
+        letter-spacing: -5px;
+        text-align: center;
+        font-size: 50px;
+        color: #fff;
+        margin: 0 auto;
+        text-align: left;
+        padding: 3px 25px;
+        border: solid 1px #b0adad;
+    }
+}
+
+.c_tictoc{
+    @include tictoc();
+}
+
+.info_txt + .c_tictoc{
+    margin-top: 85px;
+}
+
+
+.wrap{
+    background: url(../images/main_bg02.svg) no-repeat center center; 
+    height: 1920px; 
+    color: #d3d3d3;
+
+    .container{
+        @include baseflex();
+        margin-top: 100px;
+
+        .left_cont{
+            width: 300px;
+            background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));                
+
+            p{
+                text-align: center;
+            }
+
+            ul{
+                width: 180px;
+                margin: 0 auto;
+
+                li{
+                    position: relative;
+                    color: #8a8a8a;
+                    padding: 50px 0 75px 0;
+
+                    span{
+                        font-size: 24px;
+                        display: block;
+                    }
+
+                    p{
+                        font-size: 36px;
+                        padding-top: 10px;
+                    }
+
+                    &:not(:last-child)::after{
+                        content: '';
+                        width: 32px;
+                        height: 20px;
+                        background: url(../images/icon/ic_arw_btm_fff.svg) no-repeat;
+                        opacity: .4;
+                        background-size: contain;
+                        display: block;
+                        transform: translateX(-50%);
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                    }
+
+                    &.on{
+                        color: #fff;
+
+                        &::after{
+                            background: url(../images/icon/ic_arw_btm_fff.svg) no-repeat;
+                            transform: translateX(-50%);
+                            opacity: 1;
+                        }
+                    }
+
+                    &:first-child{
+                        padding-top: 25px;
+                    }
+                }
+            }
+        }
+        .right_cont{
+            margin: -9px auto;
+            
+            .c_tictoc::after{
+                width: 199px;
+                height: 63px;
+                top: -48px;
+            }
+            
+            .num_box{
+                font-size: 0;
+                width: 546px;
+                margin: 25px auto 0 auto;
+                @include baseflex();
+                justify-content: space-around;
+
+                .num{
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+
+    .btm_nav{
+        @include baseflex();
+        position: fixed;
+        width: 100%;
+        bottom: 50px;
+        padding: 0 80px;
+        text-align: center;
+        justify-content: space-between;
+
+        .btn_cont{
+            @include baseflex();
+            justify-content: space-between;
+
+            .btn{
+                &.back_btn {
+                    p{
+                        &::after{
+                            background: url(../images/icon/ic_back.svg) no-repeat 0 0;
+                        }
+                    }
+                }
+                
+                &.call_btn{
+                    p{
+                        ::after{
+                            background: url(../images/icon/ic_call.svg) no-repeat 0 0;
+                        }
+                    }
+                }
+                &+.btn{
+                    margin-left: 30px;
+                }
+
+                p{
+                    padding: 9px 0;
+                    
+                    &::after{
+                        width: 80px;
+                        content: '';
+                        display: block;
+                        background-size: 100%;
+                    }
+                }
+            }
+
+        }
+        .logo{
+            background: url(../images/logo_ttisland.svg) no-repeat;
+            background-size: 100%;
+            width: 186px;
+            height: 72px;
+            right: 0;
+        }
+    }
+}

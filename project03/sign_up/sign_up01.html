@@ -5,25 +5,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>째깍섬</title>
-    <link href="css/fonts.css" rel="stylesheet" type="text/css"/>
-    <link href="css/common.css" rel="stylesheet" type="text/css"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="../css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="../../js/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="js/common.js"></script>
-	
+    <script src="../js/common.js"></script>
+	<script src="../js/includeHtml.js"></script>
 </head>
     <body>
-        
-        <div class="wrap">        
-			<div class="main_b">
-				<img src="img/main_banner.png">
-			</div>
+        <div class="wrap">  
+			<header></header>      
 			
-			<div class="main join">
-				<div class="cont">
-					<div class="join_step left">
+			<section class="main sign_up">
+				<div class="container">
+					<div class="sign_step left_cont">
 						<p class="title_jung color-y f-48">회원가입</p>
 						<ul>
 							<li class="on">
@@ -44,12 +39,12 @@
 							</li>
 						</ul>
 					</div>
-					
-					<div class="join_cont">
-						<p class="info_txt color-f">정확한 정보를 입력해 주세요. <br><span class="color-y">비상 연락망 및 시설 이용</span>에 필요해요. </p>
+
+					<div class="right_cont">
+						<p class="info_txt color-f f-28">정확한 정보를 입력해 주세요. <br><span class="color-y">비상 연락망 및 시설 이용</span>에 필요해요. </p>
 						<div class="pin num_pin">
-                            <p class="info_txt color-f">전화번호를 입력해 주세요</p>
-							<div class="pin_box c_tictoc_m"></div>
+							<p class="info_txt color-f f-42">전화번호를 입력해 주세요</p>
+							<div class="pin_box c_tictoc"></div>
 							<div class="inputwrapper">
 								<span class="numberinput"></span>
 								<span class="numberinput"></span>
@@ -64,42 +59,42 @@
 							</div>
 							
 							<div class="num_box">
-								<p class="num"><span class="number">1</span><img src="img/btn01.svg"></p>
-								<p class="num"><span class="number">2</span><img src="img/btn02.svg"></p>
-								<p class="num"><span class="number">3</span><img src="img/btn03.svg"></p>
-								<p class="num"><span class="number">4</span><img src="img/btn04.svg"></p>
-								<p class="num"><span class="number">5</span><img src="img/btn05.svg"></p>
-								<p class="num"><span class="number">6</span><img src="img/btn06.svg"></p>
-								<p class="num"><span class="number">7</span><img src="img/btn07.svg"></p>
-								<p class="num"><span class="number">8</span><img src="img/btn08.svg"></p>
-								<p class="num"><span class="number">9</span><img src="img/btn09.svg"></p>
-								<p class="num allclear"><span class="">다시 입력</span><img src="img/btn_re.svg"></p>
-								<p class="num"><span class="number">0</span><img src="img/btn_00.svg"></p>
-								<p class="num clear"><span class="number">취소</span><img src="img/btn_back.svg"></p>
+								<p class="num"><span class="number">1</span><img src="../images/btn/btn01.svg"></p>
+								<p class="num"><span class="number">2</span><img src="../images/btn/btn02.svg"></p>
+								<p class="num"><span class="number">3</span><img src="../images/btn/btn03.svg"></p>
+								<p class="num"><span class="number">4</span><img src="../images/btn/btn04.svg"></p>
+								<p class="num"><span class="number">5</span><img src="../images/btn/btn05.svg"></p>
+								<p class="num"><span class="number">6</span><img src="../images/btn/btn06.svg"></p>
+								<p class="num"><span class="number">7</span><img src="../images/btn/btn07.svg"></p>
+								<p class="num"><span class="number">8</span><img src="../images/btn/btn08.svg"></p>
+								<p class="num"><span class="number">9</span><img src="../images/btn/btn09.svg"></p>
+								<p class="num allclear"><span class="">다시 입력</span><img src="../images/btn/btn_re.svg"></p>
+								<p class="num"><span class="number">0</span><img src="../images/btn/btn_00.svg"></p>
+								<p class="num clear"><span class="number">취소</span><img src="../images/btn/btn_back.svg"></p>
 							</div>
 						</div>
 						
-						<a href="javascript:;" class="next_btn"><img src="img/btn_next.svg"></a>
+						<a href="javascript:;" class="next_btn"><img src="../images/btn/btn_next.svg"></a>
 					</div>
+				</div>
+			</section><!--container E-->
 			
+			<footer class="btm_nav">
+				<div class="btn_cont">
+					<div class="back_btn btn">
+						<p class="f-28">이전화면</p>
+					</div>
+					<div class="call_btn btn">
+						<p class="f-28">직원호출</p>
+					</div>
 				</div>
-			</div>
-			
-			<div class="btm_nav">
-				<div class="back_btn btn_80">
-					<a href="javascript:;" class="back_btn">
-						<img src="img/ic_back.svg">
-						<p class="btn_txt">이전화면</p>
-					</a>
+				
+				<div class="right_cont">
+					<div class="logo"></div>
 				</div>
-				<div class="staff_btn btn_80">
-					<img src="img/ic_call.svg">
-					<p class="btn_txt">직원호출</p>
-				</div>
-				<div class="logo"><img src="img/logo_ttisland.svg"></div>
-			</div>
-                
-        </div>
+			</footer>
+
+        </div><!--wrap E-->
 		
 		<div class="pop no_bg staff_call">
 			<div class="dimm"></div>

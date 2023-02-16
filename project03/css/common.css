@@ -56,10 +56,12 @@ textarea-placeholder {font-family: "Noto Sans Korean", "돋움", "dotum", sans-s
 
 .title_jung{font-family:"TheJung120", "돋움", "dotum", sans-serif; font-size: 60px; color: #eada22; line-height: 120%;}
 .title_nanum_txt{font-family:"Nanum Square", "돋움", "dotum", sans-serif;}
-.f-36{font-size: 36px; font-weight: 400}
-.f-32{font-size: 32px; font-weight: 400}
-.f-48{font-size: 48px; padding-bottom:35px}
-.f-52{font-size: 52px; font-weight: 400}
+.f-28{font-size: 28px;}
+.f-32{font-size: 32px;}
+.f-36{font-size: 36px;}
+.f-42{font-size: 42px;}
+.f-48{font-size: 48px;}
+.f-52{font-size: 52px;}
 .f-400{font-weight: 400}
 .f-600{font-weight: 600}
 .align-c{text-align: center}
