@@ -5,27 +5,22 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>째깍섬</title>
-    <link href="css/fonts.css" rel="stylesheet" type="text/css"/>
-    <link href="css/common.css" rel="stylesheet" type="text/css"/>
-    <link href="css/style.css" rel="stylesheet" type="text/css"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+    <script src="../../js/jquery.min.js"></script>
 	<script src="https://unpkg.com/hangul-js" type="text/javascript"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css"/>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-    <script src="js/common.js"></script>
-	
+	<link rel="stylesheet" type="text/css" href="../../project02/css/slick.css"/>
+    <script type="text/javascript" src="../../project02/js/slick.min.js"></script>
+    <script src="../js/common.js"></script>
+	<script src="../js/includeHtml.js"></script>
 </head>
     <body>
-        
-        <div class="wrap">        
-			<div class="main_b">
-				<img src="img/main_banner.png">
-			</div>
-			
-			<div class="main join">
-				<div class="cont">
-					<div class="join_step left">
-						<p class="title_jung f-48">회원가입</p>
+        <div class="wrap">  
+			<header></header><!--header include-->
+
+			<section class="main sign_up">
+				<div class="container">
+					<div class="sign_step left_cont">
+						<p class="title_jung color-y f-48">회원가입</p>
 						<ul>
 							<li>
 								<span>STEP 1</span>
@@ -46,183 +41,179 @@
 						</ul>
 					</div>
 
-					
-					<div class="join_cont re">
-						<ul>
-							<li>
-								<p class="info_txt color-f">정확한 정보를 입력해 주세요. <br><span class="color-y">비상 연락망 및 시설 이용</span>에 필요해요. </p>
-								<div class="pin txt_pin">
-                                    <p class="info_txt color-f">아이 이름을 입력해 주세요</p>
-									<div class="pin_box"></div>
-									<div class="inputwrapper c_tictoc_m">
-										<span class="txtinput"></span>
-									</div>
-		
-									<div class="txt_box margin_x">
-										<div class="row row01">
-											<p class="num"><span class="number">ㅂ</span><img src="img/q.svg"></p>
-											<p class="num"><span class="number">ㅈ</span><img src="img/w.svg"></p>
-											<p class="num"><span class="number">ㄷ</span><img src="img/e.svg"></p>
-											<p class="num"><span class="number">ㄱ</span><img src="img/r.svg"></p>
-											<p class="num"><span class="number">ㅅ</span><img src="img/t.svg"></p>
-											<p class="num"><span class="number">ㅛ</span><img src="img/y.svg"></p>
-											<p class="num"><span class="number">ㅕ</span><img src="img/u.svg"></p>
-											<p class="num"><span class="number">ㅑ</span><img src="img/i.svg"></p>
-											<p class="num"><span class="number">ㅐ</span><img src="img/o.svg"></p>
-											<p class="num"><span class="number">ㅔ</span><img src="img/p.svg"></p>
+					<div class="right_cont">
+						<p class="info_txt color-f f-28">정확한 정보를 입력해 주세요. <br><span class="color-y">비상 연락망 및 시설 이용</span>에 필요해요. </p>
+						<div class="inner">
+							<ul class="sign_up_list">
+								<li>
+									<div class="pin txt_pin">
+										<p class="info_txt color-f f-42">아이 이름을 입력해 주세요</p>
+										<div class="inputwrapper c_tictoc">
+											<span class="txtinput"></span>
 										</div>
-		
-										<div class="row row02">
-											<p class="num"><span class="number">ㅁ</span><img src="img/a.svg"></p>
-											<p class="num"><span class="number">ㄴ</span><img src="img/s.svg"></p>
-											<p class="num"><span class="number">ㅇ</span><img src="img/d.svg"></p>
-											<p class="num"><span class="number">ㄹ</span><img src="img/f.svg"></p>
-											<p class="num"><span class="number">ㅎ</span><img src="img/g.svg"></p>
-											<p class="num"><span class="number">ㅗ</span><img src="img/h.svg"></p>
-											<p class="num"><span class="number">ㅓ</span><img src="img/j.svg"></p>
-											<p class="num"><span class="number">ㅏ</span><img src="img/k.svg"></p>
-											<p class="num"><span class="number">ㅠ</span><img src="img/b.svg"></p>
-											<p class="num clear"><span class="number">취소</span><img src="img/btn_del_s.svg"></p>
-										</div>
-		
-										<div class="row row03">
-											<p class="num shift"><span class="number">쉬프트</span><img src="img/btn_shift_s.svg"></p>
-											<p class="num"><span class="number">ㅋ</span><img src="img/z.svg"></p>
-											<p class="num"><span class="number">ㅌ</span><img src="img/x.svg"></p>
-											<p class="num"><span class="number">ㅊ</span><img src="img/c.svg"></p>
-											<p class="num"><span class="number">ㅍ</span><img src="img/v.svg"></p>
-											<p class="num"><span class="number">ㅜ</span><img src="img/n.svg"></p>
-											<p class="num"><span class="number">ㅡ</span><img src="img/m.svg"></p>
-											<p class="num"><span class="number">ㅣ</span><img src="img/l.svg"></p>
-											<p class="num done"><span class="">완료</span><img src="img/btn_done_s.svg"></p>
-										</div>
-		
-										<div class="t_close_btn"></div>
-		
-									</div>
-		
-									<!-- 쌍자음 -->
-									<div class="txt_box_shift margin_x">
-										<div class="row row01">
-											<p class="num"><span class="number">ㅃ</span><img src="img/qq.svg"></p>
-											<p class="num"><span class="number">ㅉ</span><img src="img/ww.svg"></p>
-											<p class="num"><span class="number">ㄸ</span><img src="img/ee.svg"></p>
-											<p class="num"><span class="number">ㄲ</span><img src="img/rr.svg"></p>
-											<p class="num"><span class="number">ㅆ</span><img src="img/tt.svg"></p>
-											<p class="num"><span class="number">ㅛ</span><img src="img/y.svg"></p>
-											<p class="num"><span class="number">ㅕ</span><img src="img/u.svg"></p>
-											<p class="num"><span class="number">ㅑ</span><img src="img/i.svg"></p>
-											<p class="num"><span class="number">ㅒ</span><img src="img/oo.svg"></p>
-											<p class="num"><span class="number">ㅖ</span><img src="img/pp.svg"></p>
-										</div>
-		
-										<div class="row row02">
-											<p class="num"><span class="number">ㅁ</span><img src="img/a.svg"></p>
-											<p class="num"><span class="number">ㄴ</span><img src="img/s.svg"></p>
-											<p class="num"><span class="number">ㅇ</span><img src="img/d.svg"></p>
-											<p class="num"><span class="number">ㄹ</span><img src="img/f.svg"></p>
-											<p class="num"><span class="number">ㅎ</span><img src="img/g.svg"></p>
-											<p class="num"><span class="number">ㅗ</span><img src="img/h.svg"></p>
-											<p class="num"><span class="number">ㅓ</span><img src="img/j.svg"></p>
-											<p class="num"><span class="number">ㅏ</span><img src="img/k.svg"></p>
-											<p class="num"><span class="number">ㅠ</span><img src="img/b.svg"></p>
-											<p class="num clear"><span class="number">취소</span><img src="img/btn_del_s.svg"></p>											
-										</div>
-		
-										<div class="row row03">
-											<p class="num shift"><span class="number">쉬프트</span><img src="img/btn_shiftshift_s.svg"></p>
-											<p class="num"><span class="number">ㅋ</span><img src="img/z.svg"></p>
-											<p class="num"><span class="number">ㅌ</span><img src="img/x.svg"></p>
-											<p class="num"><span class="number">ㅊ</span><img src="img/c.svg"></p>
-											<p class="num"><span class="number">ㅍ</span><img src="img/v.svg"></p>
-											<p class="num"><span class="number">ㅜ</span><img src="img/n.svg"></p>
-											<p class="num"><span class="number">ㅡ</span><img src="img/m.svg"></p>
-											<p class="num"><span class="number">ㅣ</span><img src="img/l.svg"></p>											
-											<p class="num done"><span class="">완료</span><img src="img/btn_done_s.svg"></p>
-										</div>
-		
-										<div class="t_close_btn"></div>
-		
-									</div>
-							
-							</li>
-							<li>
-								<p class="title_nanum_txt color-f">아이의 생년월을 입력해 주세요</p>
-								<div class="custom-select year">
-									<select id="year_slt">
-										<option value="00"></option>
-										<option value="2009">2009</option>
-										<option value="2010">2010</option>
-										<option value="2011">2011</option>
-										<option value="2012">2012</option>
-										<option value="2013">2013</option>
-										<option value="2014">2014</option>
-										<option value="2015">2015</option>
-										<option value="2016">2016</option>
-										<option value="2017">2017</option>
-										<option value="2018">2018</option>
-										<option value="2019">2019</option>
-									</select>
-								</div>
-								
-								<div class="custom-select month">
-									<select id="month_slt">
-										<option value="00"></option>
-										<option value="01">01</option>
-										<option value="02">02</option>
-										<option value="03">03</option>
-										<option value="04">04</option>
-										<option value="05">05</option>
-										<option value="06">06</option>
-										<option value="07">07</option>
-										<option value="08">08</option>
-										<option value="09">09</option>
-										<option value="10">10</option>
-										<option value="11">11</option>
-										<option value="12">12</option>
-									</select>
-								</div>
-							</li>
-							<li>
-								<p class="title_nanum_txt color-f">아이의 성별을 선택해 주세요</p>
-								<div class="slt_list">
-									<input type="radio" name="gender" id="male" class="ch_t">
-									<label for="male" class="rdo">남아</label>
-								</div>
-								<div class="slt_list">
-									<input type="radio" name="gender" id="female" class="ch_t">
-									<label for="female" class="rdo">여아</label>
-								</div>
-							</li>
-						</ul>
+										<div class="pin_box"></div>
+										<div class="keypad_txt">
+											<div class="row row01">
+												<p class="num"><span class="number">ㅂ</span><img src="../images/keypad/q.svg"></p>
+												<p class="num"><span class="number">ㅈ</span><img src="../images/keypad/w.svg"></p>
+												<p class="num"><span class="number">ㄷ</span><img src="../images/keypad/e.svg"></p>
+												<p class="num"><span class="number">ㄱ</span><img src="../images/keypad/r.svg"></p>
+												<p class="num"><span class="number">ㅅ</span><img src="../images/keypad/t.svg"></p>
+												<p class="num"><span class="number">ㅛ</span><img src="../images/keypad/y.svg"></p>
+												<p class="num"><span class="number">ㅕ</span><img src="../images/keypad/u.svg"></p>
+												<p class="num"><span class="number">ㅑ</span><img src="../images/keypad/i.svg"></p>
+												<p class="num"><span class="number">ㅐ</span><img src="../images/keypad/o.svg"></p>
+												<p class="num"><span class="number">ㅔ</span><img src="../images/keypad/p.svg"></p>
+											</div>
 
-						<div class="btn_group">
-							<a href="join03_add_child.html" class="btn_a"><img src="img/btn_add_c_s.svg"></a>
-							<a href="javascript:;" class="w50 btn_next btn_a"><img src="img/btn_next_s_re.svg"></a>
-							
-							<!--수정완료버튼<a href="javascript:;" class="btn_a"><img src="img/btn_mod_100.svg"></a>-->						
+											<div class="row row02">
+												<p class="num"><span class="number">ㅁ</span><img src="../images/keypad/a.svg"></p>
+												<p class="num"><span class="number">ㄴ</span><img src="../images/keypad/s.svg"></p>
+												<p class="num"><span class="number">ㅇ</span><img src="../images/keypad/d.svg"></p>
+												<p class="num"><span class="number">ㄹ</span><img src="../images/keypad/f.svg"></p>
+												<p class="num"><span class="number">ㅎ</span><img src="../images/keypad/g.svg"></p>
+												<p class="num"><span class="number">ㅗ</span><img src="../images/keypad/h.svg"></p>
+												<p class="num"><span class="number">ㅓ</span><img src="../images/keypad/j.svg"></p>
+												<p class="num"><span class="number">ㅏ</span><img src="../images/keypad/k.svg"></p>
+												<p class="num"><span class="number">ㅠ</span><img src="../images/keypad/b.svg"></p>
+												<p class="num"><span class="number">ㅜ</span><img src="../images/keypad/n.svg"></p>
+											</div>
+
+											<div class="row row03">
+												<p class="num shift"><span class="number">쉬프트</span><img src="../images/keypad/shift.svg"></p>
+												<p class="num"><span class="number">ㅋ</span><img src="../images/keypad/z.svg"></p>
+												<p class="num"><span class="number">ㅌ</span><img src="../images/keypad/x.svg"></p>
+												<p class="num"><span class="number">ㅊ</span><img src="../images/keypad/c.svg"></p>
+												<p class="num"><span class="number">ㅍ</span><img src="../images/keypad/v.svg"></p>
+												<p class="num"><span class="number">ㅡ</span><img src="../images/keypad/m.svg"></p>
+												<p class="num"><span class="number">ㅣ</span><img src="../images/keypad/l.svg"></p>
+												<p class="num clear"><span class="number">취소</span><img src="../images/keypad/btn_back.svg"></p>
+											</div>
+
+											<div class="t_close_btn"></div>
+
+										</div>
+
+										<!-- 쌍자음 -->
+										<div class="keypad_txt_shift">
+											<div class="row row01">
+												<p class="num"><span class="number">ㅃ</span><img src="../images/keypad/qq.svg"></p>
+												<p class="num"><span class="number">ㅉ</span><img src="../images/keypad/ww.svg"></p>
+												<p class="num"><span class="number">ㄸ</span><img src="../images/keypad/ee.svg"></p>
+												<p class="num"><span class="number">ㄲ</span><img src="../images/keypad/rr.svg"></p>
+												<p class="num"><span class="number">ㅆ</span><img src="../images/keypad/tt.svg"></p>
+												<p class="num"><span class="number">ㅛ</span><img src="../images/keypad/y.svg"></p>
+												<p class="num"><span class="number">ㅕ</span><img src="../images/keypad/u.svg"></p>
+												<p class="num"><span class="number">ㅑ</span><img src="../images/keypad/i.svg"></p>
+												<p class="num"><span class="number">ㅒ</span><img src="../images/keypad/oo.svg"></p>
+												<p class="num"><span class="number">ㅖ</span><img src="../images/keypad/pp.svg"></p>
+											</div>
+
+											<div class="row row02">
+												<p class="num"><span class="number">ㅁ</span><img src="../images/keypad/a.svg"></p>
+												<p class="num"><span class="number">ㄴ</span><img src="../images/keypad/s.svg"></p>
+												<p class="num"><span class="number">ㅇ</span><img src="../images/keypad/d.svg"></p>
+												<p class="num"><span class="number">ㄹ</span><img src="../images/keypad/f.svg"></p>
+												<p class="num"><span class="number">ㅎ</span><img src="../images/keypad/g.svg"></p>
+												<p class="num"><span class="number">ㅗ</span><img src="../images/keypad/h.svg"></p>
+												<p class="num"><span class="number">ㅓ</span><img src="../images/keypad/j.svg"></p>
+												<p class="num"><span class="number">ㅏ</span><img src="../images/keypad/k.svg"></p>
+												<p class="num"><span class="number">ㅠ</span><img src="../images/keypad/b.svg"></p>
+												<p class="num"><span class="number">ㅜ</span><img src="../images/keypad/n.svg"></p>
+											</div>
+
+											<div class="row row03">
+												<p class="num shift_btn shift"><span class="number">쉬프트</span><img src="../images/keypad/shiftshift.svg"></p>
+												<p class="num"><span class="number">ㅋ</span><img src="../images/keypad/z.svg"></p>
+												<p class="num"><span class="number">ㅌ</span><img src="../images/keypad/x.svg"></p>
+												<p class="num"><span class="number">ㅊ</span><img src="../images/keypad/c.svg"></p>
+												<p class="num"><span class="number">ㅍ</span><img src="../images/keypad/v.svg"></p>
+												<p class="num"><span class="number">ㅡ</span><img src="../images/keypad/m.svg"></p>
+												<p class="num"><span class="number">ㅣ</span><img src="../images/keypad/l.svg"></p>
+												<p class="num clear"><span class="number">취소</span><img src="../images/keypad/btn_back.svg"></p>
+											</div>
+
+											<div class="t_close_btn"></div>
+
+										</div>
+									</div>
+								</li>
+
+								<li>
+									<p class="title_nanum_txt f-36 color-f">아이의 생년월을 입력해 주세요</p>
+									<div class="custom-select year">
+										<select id="year_slt">
+											<option value="00"></option>
+											<option value="2009">2009</option>
+											<option value="2010">2010</option>
+											<option value="2011">2011</option>
+											<option value="2012">2012</option>
+											<option value="2013">2013</option>
+											<option value="2014">2014</option>
+											<option value="2015">2015</option>
+											<option value="2016">2016</option>
+											<option value="2017">2017</option>
+											<option value="2018">2018</option>
+											<option value="2019">2019</option>
+										</select>
+									</div>
+									
+									<div class="custom-select month">
+										<select id="month_slt">
+											<option value="00"></option>
+											<option value="01">01</option>
+											<option value="02">02</option>
+											<option value="03">03</option>
+											<option value="04">04</option>
+											<option value="05">05</option>
+											<option value="06">06</option>
+											<option value="07">07</option>
+											<option value="08">08</option>
+											<option value="09">09</option>
+											<option value="10">10</option>
+											<option value="11">11</option>
+											<option value="12">12</option>
+										</select>
+									</div>
+								</li>
+								<li>
+									<p class="title_nanum_txt f-36 color-f">아이의 성별을 선택해 주세요</p>
+									<div class="slt_list">
+										<input type="radio" name="gender" id="male" class="ch_t">
+										<label for="male" class="rdo">남아</label>
+									</div>
+									<div class="slt_list">
+										<input type="radio" name="gender" id="female" class="ch_t">
+										<label for="female" class="rdo">여아</label>
+									</div>
+								</li>
+							</ul>
+
+							<div class="btn_group mt30">
+								<a href="javascript:;" class="next_btn mt30"><img src="../images/btn/btn_add_c_s.svg"></a>
+								<a href="javascript:;" class="w50 btn_next btn_a"><img src="../images/btn/btn_add_c_s.svg"></a>
+							</div>
+
 						</div>
-						
 					</div>
-			
 				</div>
-			</div>
-			
-			<div class="btm_nav">
-				<div class="back_btn btn_80">
-					<a href="javascript:history.back();">
-						<img src="img/ic_back.svg">
-						<p class="btn_txt">이전화면</p>
-					</a>
+			</section>
+
+			<footer class="btm_nav">
+				<div class="btn_cont">
+					<div class="back_btn btn">
+						<p class="f-28">이전화면</p>
+					</div>
+					<div class="call_btn btn">
+						<p class="f-28">직원호출</p>
+					</div>
 				</div>
-				<div class="staff_btn btn_80">
-					<img src="img/ic_call.svg">
-					<p class="btn_txt">직원호출</p>
+				
+				<div class="right_cont">
+					<div class="logo"></div>
 				</div>
-				<div class="logo"><img src="img/logo_ttisland.svg"></div>
-			</div>
-                
-        </div>
+			</footer>
+        </div><!--wrap E-->
 		
 		<div class="pop no_bg staff_call">
 			<div class="dimm"></div>
@@ -234,76 +225,26 @@
 		</div>
 
     </body>
-	
+
 	<script>
-	$(document).ready(function(){			
-		$(".btn_next").on('click',function () {
-			var first_sel01=$("#year_slt option:selected").val();
-			var first_sel02=$("#month_slt option:selected").val();
-			var txtinput=$(".txtinput").text();
+		$(document).ready(function(){			
+			$(".next_btn").click(function () {
+				var txtinput=$(".txtinput").text();
+				if(txtinput == "" ){
+					$(".inputwrapper").addClass("red_color");
+				}else{
+					$(".inputwrapper").removeClass("red_color");
+				}
+			});
 			
-			if(txtinput == "" ){
-				$(".inputwrapper").addClass("red_color");
-			}else{
-				$(".inputwrapper").removeClass("red_color");
-			}
-		
-            if(first_sel01 == "00"){
-				$("#year_slt").next("div").addClass("red_color");
-            }else{
-				$("#year_slt").next("div").removeClass('red_color');
-			}
-			if(first_sel02 == "00"){
-				$("#month_slt").next("div").addClass("red_color");
-            }else{
-				$("#month_slt").next("div").removeClass('red_color');
-			}			
-
-			if ($("input[name=gender]:radio:checked").length < 1) {
-			  //alert("성별을 선택하세요");
-				$(".slt_list").addClass('red_color');
-			}else{
-				$(".slt_list").removeClass('red_color');
-			}
-
+			$(".keypad_txt .num:not(.clear):not(.shift)").click(function () {
+				var txtinput=$(".txtinput").text();
+				if(txtinput == "" ){
+					$(".inputwrapper").addClass("red_color");
+				}else{
+					$(".inputwrapper").removeClass("red_color");
+				}
+			}); 
 		});
-		
-		$(".select-selected").on('click',function () {
-			
-			var first_sel01=$("#year_slt option:selected").val();
-			var first_sel02=$("#month_slt option:selected").val();
-			if(first_sel01 !== "00"){
-				$("#year_slt").next("div").removeClass("red_color");
-			}
-			if(first_sel02 !== "00"){
-				$("#month_slt").next("div").removeClass("red_color");
-			}
-			$("#year_slt").next("div").removeClass("red_color");
-			$("#month_slt").next("div").removeClass("red_color");
-			$(".year .select-selected.select-arrow-active").text(" ");
-			$(".month .select-selected.select-arrow-active").text(" ");
-
-		});
-		
-		
-		$("input[name=gender]").click(function(){
-			if($(".slt_list").hasClass("red_color")) {
-			$(".slt_list").removeClass("red_color");
-			}
-		});
-		
-		$(".txt_box .num:not(.clear):not(.shift)").click(function () {
-			var txtinput=$(".txtinput").text();
-			if(txtinput == "" ){
-				$(".inputwrapper").addClass("red_color");
-			}else{
-				$(".inputwrapper").removeClass("red_color");
-			}
-		}); 
-		
-		$(".num.done").click(function () {
-			$(".txt_box").css("display","none");
-		});
-	});
 	</script>
 </html>

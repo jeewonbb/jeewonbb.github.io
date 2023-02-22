@@ -7,14 +7,14 @@
 	<title>째깍섬</title>
     <link href="../css/style.css" rel="stylesheet" type="text/css"/>
     <script src="../../js/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/slick.css"/>
+    <script type="text/javascript" src="../js/slick.min.js"></script>
     <script src="../js/common.js"></script>
 	<script src="../js/includeHtml.js"></script>
 </head>
     <body>
         <div class="wrap">  
-			<header></header>      
+			<header></header><!--header include-->
 			
 			<section class="main sign_up">
 				<div class="container">
@@ -42,48 +42,53 @@
 
 					<div class="right_cont">
 						<p class="info_txt color-f f-28">정확한 정보를 입력해 주세요. <br><span class="color-y">비상 연락망 및 시설 이용</span>에 필요해요. </p>
-						<div class="pin num_pin">
-							<p class="info_txt color-f f-42">전화번호를 입력해 주세요</p>
-							<div class="pin_box c_tictoc"></div>
-							<div class="inputwrapper">
-								<span class="numberinput"></span>
-								<span class="numberinput"></span>
-								<span class="numberinput hyphen03"></span>
-								<span class="numberinput"></span>
-								<span class="numberinput"></span>
-								<span class="numberinput hyphen06"></span>
-								<span class="numberinput"></span>
-								<span class="numberinput"></span>
-								<span class="numberinput"></span>
-								<span class="numberinput"></span>
+
+						<div class="inner">
+							<div class="pin num_pin">
+								<p class="info_txt color-f f-42">전화번호를 입력해 주세요</p>
+								<div class="pin_box c_tictoc"></div>
+								<div class="inputwrapper">
+									<span class="numberinput"></span>
+									<span class="numberinput"></span>
+									<span class="numberinput hyphen03"></span>
+									<span class="numberinput"></span>
+									<span class="numberinput"></span>
+									<span class="numberinput hyphen06"></span>
+									<span class="numberinput"></span>
+									<span class="numberinput"></span>
+									<span class="numberinput"></span>
+									<span class="numberinput"></span>
+								</div>
+								
+								<div class="keypad_num">
+									<p class="num"><span class="number">1</span><img src="../images/keypad/btn01.svg"></p>
+									<p class="num"><span class="number">2</span><img src="../images/keypad/btn02.svg"></p>
+									<p class="num"><span class="number">3</span><img src="../images/keypad/btn03.svg"></p>
+									<p class="num"><span class="number">4</span><img src="../images/keypad/btn04.svg"></p>
+									<p class="num"><span class="number">5</span><img src="../images/keypad/btn05.svg"></p>
+									<p class="num"><span class="number">6</span><img src="../images/keypad/btn06.svg"></p>
+									<p class="num"><span class="number">7</span><img src="../images/keypad/btn07.svg"></p>
+									<p class="num"><span class="number">8</span><img src="../images/keypad/btn08.svg"></p>
+									<p class="num"><span class="number">9</span><img src="../images/keypad/btn09.svg"></p>
+									<p class="num allclear"><span class="">다시 입력</span><img src="../images/keypad/btn_re.svg"></p>
+									<p class="num"><span class="number">0</span><img src="../images/keypad/btn_00.svg"></p>
+									<p class="num clear"><span class="number">취소</span><img src="../images/keypad/btn_back.svg"></p>
+								</div>
 							</div>
-							
-							<div class="num_box">
-								<p class="num"><span class="number">1</span><img src="../images/btn/btn01.svg"></p>
-								<p class="num"><span class="number">2</span><img src="../images/btn/btn02.svg"></p>
-								<p class="num"><span class="number">3</span><img src="../images/btn/btn03.svg"></p>
-								<p class="num"><span class="number">4</span><img src="../images/btn/btn04.svg"></p>
-								<p class="num"><span class="number">5</span><img src="../images/btn/btn05.svg"></p>
-								<p class="num"><span class="number">6</span><img src="../images/btn/btn06.svg"></p>
-								<p class="num"><span class="number">7</span><img src="../images/btn/btn07.svg"></p>
-								<p class="num"><span class="number">8</span><img src="../images/btn/btn08.svg"></p>
-								<p class="num"><span class="number">9</span><img src="../images/btn/btn09.svg"></p>
-								<p class="num allclear"><span class="">다시 입력</span><img src="../images/btn/btn_re.svg"></p>
-								<p class="num"><span class="number">0</span><img src="../images/btn/btn_00.svg"></p>
-								<p class="num clear"><span class="number">취소</span><img src="../images/btn/btn_back.svg"></p>
+						
+							<div class="btn_group mt70">
+								<a href="javascript:;" class="next_btn"><img src="../images/btn/btn_next.svg"></a>
 							</div>
 						</div>
-						
-						<a href="javascript:;" class="next_btn"><img src="../images/btn/btn_next.svg"></a>
 					</div>
 				</div>
 			</section><!--container E-->
 			
 			<footer class="btm_nav">
 				<div class="btn_cont">
-					<div class="back_btn btn">
+					<!--<div class="back_btn btn">
 						<p class="f-28">이전화면</p>
-					</div>
+					</div>-->
 					<div class="call_btn btn">
 						<p class="f-28">직원호출</p>
 					</div>
@@ -100,8 +105,8 @@
 			<div class="dimm"></div>
 			<div class="pop_cont">
 				<p class="f-48 title_nanum color-f">직원을 호출했어요<br>잠시만 기다려 주세요</p>
-				<img src="img/staff_call.gif">
-				<a href="staff_call.html" class="mt80"><img src="img/btn_staff.svg"></a>
+				<img src="../images/gif/staff_call.gif">
+				<a href="staff_call.html" class="mt80"><img src="../images/btn/btn_staff.svg"></a>
 			</div>
 		</div>
 		
@@ -143,7 +148,7 @@
 	
 	<script>
 		
-		$(".num_box .num:not(.clear):not(.allclear)").click(function () {
+		$(".keypad_num .num:not(.clear):not(.allclear)").click(function () {
 			var txtinput=$(".numberinput").text();
 			if(txtinput == "" ){
 				$(".inputwrapper").addClass("red_color");
@@ -175,7 +180,5 @@
 		//n초 반응 없음		
 		//$(".pop").not(".staff_call").fadeIn(300).find(".auto_logout").addClass("on");
 
-	
-		
 	</script>
 </html>

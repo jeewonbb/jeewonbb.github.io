@@ -318,6 +318,7 @@ body {
 .header_inner .header_btm .txt_wrap .right_t {
   position: relative;
   width: 45%;
+  transform: skew(-0.1deg);
 }
 .header_inner .header_btm .txt_wrap .right_t .about_txt {
   font-size: 1.8rem;

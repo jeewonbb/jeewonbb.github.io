@@ -52,16 +52,16 @@ $(document).ready(function () {
 		}
 
 		if(shiftFlag === false){
-			$(".txt_box").css("display","block");
-			$(".txt_box_shift").css("display","none");
+			$(".keypad_txt").css("display","block");
+			$(".keypad_txt_shift").css("display","none");
 		}else {
-			$(".txt_box").css("display","none");
-			$(".txt_box_shift").css("display","block");
+			$(".keypad_txt").css("display","none");
+			$(".keypad_txt_shift").css("display","block");
 		}
 		
 		$(".shift_btn").click(function () {
-			$(".txt_box").css("display","block");
-			$(".txt_box_shift").css("display","none");
+			$(".keypad_txt").css("display","block");
+			$(".keypad_txt_shift").css("display","none");
 		});
 
 
@@ -69,14 +69,14 @@ $(document).ready(function () {
 	});
 	
 	$(".inputwrapper").click(function () {
-		$(".txt_box").css("display","block");
+		$(".keypad_txt").css("display","block");
 	});
 	$(".t_close_btn").click(function () {
 		$(this).parent("div").css("display","none");
 	});
 	
 	$(".num.done").click(function () {
-		$(this).parents(".txt_box, .txt_box_shift").css("display","none");
+		$(this).parents(".keypad_txt, .keypad_txt_shift").css("display","none");
 	});
 
 	$(".allclear").click(function () {
@@ -130,7 +130,7 @@ $(document).ready(function () {
 
 	});
 
-	$(".staff_btn").click(function () {
+	$(".call_btn").click(function () {
 		$(".staff_call").fadeIn(300).find(".pop_cont").addClass("on");
 	});
 	
