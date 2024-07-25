@@ -1,0 +1,297 @@
+@import "common.css";
+@import "fonts.css";
+@import "select.css";
+html {
+  width: 1080px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+body.hidden {
+  overflow: hidden;
+}
+
+.inputwrapper {
+  width: 534px;
+  height: 80px;
+  background: rgba(255, 255, 255, 0.3);
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+  letter-spacing: -5px;
+  text-align: center;
+  font-size: 50px;
+  color: #fff;
+  margin: 0 auto;
+  padding: 3px 25px;
+  border: solid 1px #b0adad;
+}
+.inputwrapper.red_color {
+  border: 2px solid #ff3030;
+}
+.inputwrapper .numberinput {
+  line-height: 65px;
+}
+.inputwrapper .hyphen03.on::after,
+.inputwrapper .hyphen06.on::after {
+  content: " - ";
+  font-size: 60px;
+  display: inline-block;
+  vertical-align: bottom;
+  padding: 0 3px 0 11px;
+}
+
+.c_tictoc {
+  position: relative;
+}
+.c_tictoc::after {
+  content: "";
+  background: url(../images/c_ttcroc.svg) no-repeat;
+  background-size: contain;
+  position: absolute;
+  right: 0;
+}
+
+.info_txt + .c_tictoc {
+  margin-top: 85px;
+}
+
+.wrap {
+  background: url(../images/main_bg02.svg) no-repeat center center;
+  height: 1920px;
+  color: #d3d3d3;
+  position: relative;
+}
+.wrap .container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.wrap .container .left_cont {
+  width: 300px;
+  padding-top: 9px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+}
+.wrap .container .left_cont > p {
+  text-align: center;
+}
+.wrap .container .left_cont ul {
+  margin: 55px auto;
+}
+.wrap .container .left_cont ul li {
+  position: relative;
+  color: #8a8a8a;
+  padding: 45px 0 65px 66px;
+}
+.wrap .container .left_cont ul li span {
+  font-size: 24px;
+  display: block;
+}
+.wrap .container .left_cont ul li p {
+  font-size: 36px;
+  padding-top: 10px;
+}
+.wrap .container .left_cont ul li:not(:last-child)::after {
+  content: "";
+  width: 32px;
+  height: 20px;
+  background: url(../images/icon/ic_arw_btm_fff.svg) no-repeat;
+  opacity: 0.4;
+  background-size: contain;
+  display: block;
+  transform: translateX(-50%);
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+}
+.wrap .container .left_cont ul li.on {
+  color: #fff;
+}
+.wrap .container .left_cont ul li.on::after {
+  background: url(../images/icon/ic_arw_btm_fff.svg) no-repeat;
+  transform: translateX(-50%);
+  opacity: 1;
+}
+.wrap .container .left_cont ul li:first-child {
+  padding-top: 25px;
+}
+.wrap .container .right_cont {
+  margin: 0 auto;
+}
+.wrap .container .right_cont > .info_txt {
+  margin-left: -75px;
+}
+.wrap .container .right_cont .inner {
+  margin: 55px auto 0 auto;
+  position: relative;
+}
+.wrap .container .right_cont .c_tictoc::after {
+  width: 199px;
+  height: 63px;
+  top: -48px;
+}
+.wrap .container .keypad_num {
+  font-size: 0;
+  width: 546px;
+  margin: 25px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.wrap .container .keypad_num > p:active img {
+  transform: scale(0.85);
+}
+.wrap .container .keypad_num > p img {
+  transition: transform 0.2s;
+}
+.wrap .container .keypad_num .num {
+  margin-bottom: 10px;
+}
+.wrap .container .keypad_txt_shift,
+.wrap .container .keypad_txt {
+  display: none;
+  width: 1075px;
+  height: 461px;
+  padding: 73px 61px 0 61px;
+  position: absolute;
+  z-index: 1;
+  top: 350px;
+  left: -420px;
+  background: url(../images/keypad/keyboard_bg02.svg) no-repeat;
+}
+.wrap .container .keypad_txt_shift .row,
+.wrap .container .keypad_txt .row {
+  margin-bottom: -10px;
+}
+.wrap .container .keypad_txt_shift .row p,
+.wrap .container .keypad_txt .row p {
+  display: inline-block;
+  font-size: 0;
+  margin-bottom: 10px;
+}
+.wrap .container .keypad_txt_shift .t_close_btn,
+.wrap .container .keypad_txt .t_close_btn {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  top: 10px;
+  background: url(../images/keypad/key_close.svg) no-repeat center;
+  background-size: 40px 40px;
+}
+.wrap .btm_nav {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  bottom: 50px;
+  padding: 0 80px;
+  text-align: center;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.wrap .btm_nav .btn_cont {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.wrap .btm_nav .btn_cont .btn.back_btn p::before {
+  background-image: url(../images/icon/ic_back.svg);
+}
+.wrap .btm_nav .btn_cont .btn.call_btn p::before {
+  background-image: url(../images/icon/ic_call.svg);
+}
+.wrap .btm_nav .btn_cont .btn + .btn {
+  margin-left: 30px;
+}
+.wrap .btm_nav .btn_cont .btn p {
+  padding: 9px 0;
+}
+.wrap .btm_nav .btn_cont .btn p::before {
+  width: 80px;
+  height: 80px;
+  content: "";
+  display: block;
+  background-size: 100%;
+  background-position: center center;
+  margin: 9px auto;
+}
+.wrap .btm_nav .logo {
+  background: url(../images/logo_ttisland.svg) no-repeat;
+  background-size: 100%;
+  width: 186px;
+  height: 72px;
+  right: 0;
+}
+
+.pop {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.pop.staff_call .pin {
+  margin-top: 60px;
+}
+.pop.staff_call p {
+  line-height: 150%;
+  font-weight: 300;
+}
+.pop.staff_call img {
+  margin: -200px auto -260px auto;
+  display: block;
+}
+.pop.no_bg .pop_cont {
+  border: none;
+  box-shadow: none;
+  background: transparent;
+}
+.pop .dimm {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.4);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.pop .pop_cont {
+  transform: translateY(-1000px);
+  transition: 0.5s;
+  position: absolute;
+  left: 61px;
+  background-color: #fff;
+  margin: 0 auto;
+  font-weight: 400;
+  text-align: center;
+  border: 1px solid #888;
+  width: 958px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.pop .pop_cont a {
+  display: block;
+}
+.pop .pop_cont.on {
+  transform: translateY(500px);
+}
+.pop .pop_cont .terms_txt {
+  padding: 60px 60px 65px;
+  text-align: left;
+}
+.pop .pop_cont .terms_txt .terms_txt_in {
+  padding: 25px;
+  background: #f6f6f6;
+  height: 660px;
+  overflow-y: scroll;
+}
+
+@media screen and (min-width: 1081px) {
+  html {
+    overflow: auto;
+  }
+}/*# sourceMappingURL=style.css.map */
