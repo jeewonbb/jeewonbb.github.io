@@ -142,9 +142,9 @@ document.addEventListener("DOMContentLoaded", () => {
   handleResize();
 
   // Random hide element on loading page
-  const loadingTexts = document.querySelectorAll(".loading_page p");
-  if (loadingTexts.length > 0) {
-    const randomIndex = Math.floor(Math.random() * loadingTexts.length);
-    loadingTexts[randomIndex].style.display = "none";
-  }
+  // const loadingTexts = document.querySelectorAll(".loading_page p");
+  // if (loadingTexts.length > 0) {
+  //   const randomIndex = Math.floor(Math.random() * loadingTexts.length);
+  //   loadingTexts[randomIndex].style.display = "none";
+  // }
 });
