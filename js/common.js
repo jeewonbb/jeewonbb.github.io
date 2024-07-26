@@ -1,47 +1,59 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // Load animations using Lottie
-  const animations = [
-    { container: document.getElementById("Arw1"), path: "js/arw1.json" },
-    { container: document.getElementById("Arw2"), path: "js/arw2.json" },
-    { container: document.getElementById("Fly"), path: "js/fly.json" },
-  ];
+  // Check if the bodymovin library is loaded
+  if (typeof bodymovin !== "undefined") {
+    const animations = [
+      { container: document.getElementById("Arw1"), path: "js/arw1.json" },
+      { container: document.getElementById("Arw2"), path: "js/arw2.json" },
+      { container: document.getElementById("Fly"), path: "js/fly.json" },
+    ];
 
-  animations.forEach(({ container, path }) => {
-    bodymovin.loadAnimation({
-      container,
-      path,
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
+    animations.forEach(({ container, path }) => {
+      if (container) {
+        bodymovin.loadAnimation({
+          container,
+          path,
+          renderer: "svg",
+          loop: true,
+          autoplay: true,
+        });
+      }
     });
-  });
+  } else {
+    console.error("bodymovin library is not loaded.");
+  }
 
   // Mouseover and mouseleave effects
   document.querySelectorAll(".txt_list li").forEach((li) => {
     li.addEventListener("mouseover", () => {
       const tabSel = li.getAttribute("data-tab");
       const target = document.getElementById(tabSel);
-      target.style.transform = "translateY(0%)";
-      target.style.zIndex = "1";
+      if (target) {
+        target.style.transform = "translateY(0%)";
+        target.style.zIndex = "1";
+      }
     });
 
     li.addEventListener("mouseleave", () => {
       const tabSel = li.getAttribute("data-tab");
       const target = document.getElementById(tabSel);
-      target.style.transform = "translateY(800%)";
+      if (target) {
+        target.style.transform = "translateY(800%)";
 
-      setTimeout(() => {
-        target.style.zIndex = "-1";
-      }, 10);
+        setTimeout(() => {
+          target.style.zIndex = "-1";
+        }, 10);
 
-      setTimeout(() => {
-        target.style.transform = "translateY(-800%)";
-      }, 500);
+        setTimeout(() => {
+          target.style.transform = "translateY(-800%)";
+        }, 500);
+      }
     });
   });
 
-  document.querySelector(".txt_wrap .left_t").style.transform =
-    "translateY(100%)";
+  const leftT = document.querySelector(".txt_wrap .left_t");
+  if (leftT) {
+    leftT.style.transform = "translateY(100%)";
+  }
 
   // Scroll and navigation
   const handleResize = () => {
@@ -59,13 +71,20 @@ document.addEventListener("DOMContentLoaded", () => {
         $wrap.className = $wrap.className.replace(/(^|\s)active-page\S+/g, "");
         $wrap.classList.add(`active-page${currentPage}`);
         $navBtns.forEach((btn) => btn.classList.remove("active"));
-        document
-          .querySelector(`.nav-btn.nav-page${currentPage}`)
-          .classList.add("active");
-        $navPanel.classList.add("invisible");
+        const currentNavBtn = document.querySelector(
+          `.nav-btn.nav-page${currentPage}`
+        );
+        if (currentNavBtn) {
+          currentNavBtn.classList.add("active");
+        }
+        if ($navPanel) {
+          $navPanel.classList.add("invisible");
+        }
         scrolling = true;
         setTimeout(() => {
-          $navPanel.classList.remove("invisible");
+          if ($navPanel) {
+            $navPanel.classList.remove("invisible");
+          }
           scrolling = false;
         }, 1000);
       };
@@ -101,15 +120,21 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       });
     } else {
-      document.querySelector(".btn_top").addEventListener("click", () => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      });
-      document.querySelector(".btn_bubble").addEventListener("click", () => {
-        window.scrollTo({
-          top: document.querySelector(".home_footer").offsetTop - 10,
-          behavior: "smooth",
+      const btnTop = document.querySelector(".btn_top");
+      const btnBubble = document.querySelector(".btn_bubble");
+      if (btnTop) {
+        btnTop.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
         });
-      });
+      }
+      if (btnBubble) {
+        btnBubble.addEventListener("click", () => {
+          window.scrollTo({
+            top: document.querySelector(".page4").offsetTop - 10,
+            behavior: "smooth",
+          });
+        });
+      }
     }
   };
 
@@ -118,6 +143,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Random hide element on loading page
   const loadingTexts = document.querySelectorAll(".loading_page p");
-  const randomIndex = Math.floor(Math.random() * loadingTexts.length);
-  loadingTexts[randomIndex].style.display = "none";
+  if (loadingTexts.length > 0) {
+    const randomIndex = Math.floor(Math.random() * loadingTexts.length);
+    loadingTexts[randomIndex].style.display = "none";
+  }
 });

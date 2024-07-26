@@ -1,4 +1,4 @@
-@import "reset.css";
+@import "common.css";
 @import "../font/font.css";
 
 /*html,.scroll_wrap{
@@ -64,16 +64,12 @@ $kr_font: "GowunDodum", sans-serif;
 $border04: 1px solid rgba(255, 255, 255, 0.5);
 
 @mixin keyframes($animation-name) {
-  @-webkit-keyframes #{$animation-name} {
-    @content;
-  }
   @keyframes #{$animation-name} {
     @content;
   }
 }
 
 @mixin animation($str) {
-  -webkit-animation: #{$str};
   animation: #{$str};
 }
 
@@ -100,13 +96,9 @@ $border04: 1px solid rgba(255, 255, 255, 0.5);
 
 @keyframes scroll_left {
   0% {
-    -moz-transform: translateX(0%);
-    -webkit-transform: translateX(0%);
     transform: translateX(0%);
   }
   100% {
-    -moz-transform: translateX(-100%);
-    -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
 }
@@ -144,29 +136,23 @@ $border04: 1px solid rgba(255, 255, 255, 0.5);
   75%,
   90%,
   to {
-    -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 3000px, 0) scaleY(5);
     transform: translate3d(0, 3000px, 0) scaleY(5);
   }
   60% {
     opacity: 1;
-    -webkit-transform: translate3d(0, -20px, 0) scaleY(0.9);
     transform: translate3d(0, -20px, 0) scaleY(0.9);
   }
   75% {
-    -webkit-transform: translate3d(0, 10px, 0) scaleY(0.95);
     transform: translate3d(0, 10px, 0) scaleY(0.95);
   }
   90% {
-    -webkit-transform: translate3d(0, -5px, 0) scaleY(0.985);
     transform: translate3d(0, -5px, 0) scaleY(0.985);
   }
   to {
-    -webkit-transform: translateZ(0);
     transform: translateZ(0);
   }
 }
@@ -174,24 +160,6 @@ $border04: 1px solid rgba(255, 255, 255, 0.5);
 @keyframes blink {
   50% {
     opacity: 0;
-  }
-}
-
-html {
-  background-color: #111;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-
-  ::-webkit-scrollbar {
-    width: 6px;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-  }
-  ::-webkit-scrollbar-track {
-    background: transparent;
   }
 }
 
@@ -205,6 +173,7 @@ body {
   font-size: 1.8rem;
   font-family: Work Sans, Fredoka One, Bebas Neue, GowunDodum, sans-serif;
 }
+
 .logo_t {
   font-family: $logo_font;
 }
@@ -213,32 +182,22 @@ body {
   font-family: $title_font;
 }
 
-.scroll_wrap.active-page1 {
-  transform: translateY(0%);
+.hide {
+  font-size: 0;
+  text-indent: -9999px;
 }
-.scroll_wrap.active-page1 .page.page1 {
-  transform: scale(1);
-}
-.scroll_wrap.active-page2 {
-  transform: translateY(-100%);
-}
-.scroll_wrap.active-page2 .page.page2 {
-  transform: scale(1);
-}
-.scroll_wrap.active-page3 {
-  transform: translateY(-200%);
-}
-.scroll_wrap.active-page3 .page.page3 {
-  transform: scale(1);
-}
-.scroll_wrap.active-page4 {
-  transform: translateY(-300%);
-}
-.scroll_wrap.active-page4 .page.page4 {
-  transform: scale(1);
-}
-.scroll_wrap.active-page5 {
-  transform: translateY(-400%);
+
+.scroll_wrap {
+  $_length: 4;
+  @for $i from 1 through $_length {
+    &.active-page#{$i} {
+      transform: translateY((100) - ($i * 100%));
+
+      .page#{$i} {
+        transform: scale(1);
+      }
+    }
+  }
 }
 
 .loading_page {
@@ -263,7 +222,7 @@ body {
     }
 
     &.portfolio_box {
-      @include animation("blink 1s step-end infinite;");
+      @include animation("blink 1s step-end infinite");
     }
   }
 }
@@ -329,18 +288,30 @@ body {
       position: relative;
       height: 66px;
       width: 66px;
+      border-radius: 50%;
+      background-color: #111;
+      transition: transform 0.3s ease-in-out;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      justify-content: center;
+      text-align: center;
+      font-weight: bold;
 
-      .btn_bubble {
-        b {
-          @include bubble_b();
-        }
-
-        &:hover b {
+      &::after {
+        content: "";
+        height: 66px;
+        width: 66px;
+        border-radius: 50%;
+        background-color: #111;
+        transition: transform 0.3s ease-in-out;
+        position: absolute;
+        z-index: -1;
+      }
+      &:hover {
+        &::after {
           transform: scale(1.1);
-        }
-
-        span {
-          @include bubble_s();
         }
       }
     }
@@ -512,7 +483,7 @@ body {
           &:hover {
             strong {
               &::before {
-                @include animation("swing 2.5s infinite;");
+                @include animation("swing 2.5s infinite");
               }
             }
           }
@@ -583,7 +554,7 @@ body {
                 transform: translateY(-100%);
 
                 p {
-                  @include animation("scroll_left 10s linear infinite;");
+                  @include animation("scroll_left 10s linear infinite");
                 }
               }
             }
@@ -643,7 +614,7 @@ body {
     }
 
     &:hover .ic_v {
-      @include animation("swing 2.5s infinite;");
+      @include animation("swing 2.5s infinite");
     }
 
     &.box_link {
@@ -804,6 +775,8 @@ body {
       color: #fff;
       flex-flow: wrap;
       align-content: space-between;
+      place-items: start;
+      flex-direction: column;
       transform-style: preserve-3d;
       transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
         rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
